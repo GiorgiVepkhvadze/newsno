@@ -17,3 +17,13 @@ Route::get('lang/{locale}', 'LocalizationController@index');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'ClientController@index')->name('main');
+Route::get('/about', 'ClientController@about')->name('about');
+Route::get('/export', 'ClientController@export')->name('export');
+Route::get('/sno_likage', 'ClientController@sno_likage')->name('sno_likage');
+Route::get('/sno_quality', 'ClientController@sno_quality')->name('sno_quality');
+
+
+
+
+
+

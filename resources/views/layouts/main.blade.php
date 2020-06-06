@@ -245,7 +245,7 @@
     <!--====== BACK TO TOP PART START ======-->
     
     <a href="#" class="back-to-top">
-        <img src="images/back-to-top.png" alt="Icon">
+        <img src="{{Request::root()}}/assets/images/back-to-top.png" alt="Icon">
     </a>
 
 <!--====== jquery js ======-->

@@ -25,4 +25,29 @@ class ClientController extends Controller
     {
         return view('main');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function export()
+    {
+        return view('export');
+    }
+
+    public function sno_likage()
+    {
+        return view('sno_likage');
+    }
+
+    public function sno_quality()
+    {
+        return view('sno_quality');
+    }
+
+
+    
+
+    
 }
