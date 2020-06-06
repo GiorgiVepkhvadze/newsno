@@ -12,11 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('locales/{lang}', 'Locale@index');
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('lang/{locale}', 'LocalizationController@index');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'ClientController@index')->name('main');
