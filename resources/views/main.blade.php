@@ -85,7 +85,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="#">სნო ლიმონის</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/sno_limoni">სნო ლიმონის</a></h6>
                     </div>
                 </div>
             </div>

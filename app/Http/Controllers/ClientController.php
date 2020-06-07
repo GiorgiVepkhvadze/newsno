@@ -47,6 +47,26 @@ class ClientController extends Controller
     }
 
 
+    public function sno_mineral()
+    {
+        return view('sno_mineral');
+    }
+
+
+    public function sno_limoni()
+    {
+        return view('sno_limoni');
+    }
+
+    public function kobi_likage()
+    {
+        return view('kobi_likage');
+    }
+
+
+    
+    
+    
     
 
     
