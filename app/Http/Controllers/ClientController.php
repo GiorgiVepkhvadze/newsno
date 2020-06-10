@@ -63,6 +63,14 @@ class ClientController extends Controller
         return view('kobi_likage');
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
+
+    
+
 
     
     

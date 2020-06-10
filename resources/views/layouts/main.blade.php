@@ -119,15 +119,57 @@
                                 </ul>
                             </div>
                             <div class="cart-search">
+
+
+
+
+
+                                @if (app()->getLocale()=="ka")
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-globe"></i></a></li>
-                                    <li><a id="search" href="#"><i class="fa fa-search"></i></a>
+                                    <li><i class="fa fa-globe"></i> <a id="search" href="#">GEO <i class="fa fa-angle-down"></i></a>
                                         <div class="search-box">
-                                            <input type="search" placeholder="Search...">
-                                            <button type="button"><i class="fa fa-search"></i></button>
+                                            <a href="{{Request::root()}}/lang/en">ENG</a><br>
+                                            <a href="{{Request::root()}}/lang/ru">RUS</a><br>
+                                        </div> 
+                                    </li>
+                                </ul>                                    
+                                @endif
+
+                                @if (app()->getLocale()=="en")
+                                <ul>
+                                    <li><i class="fa fa-globe"></i> <a id="search" href="#">ENG <i class="fa fa-angle-down"></i></a>
+                                        <div class="search-box">
+                                            <a href="{{Request::root()}}/lang/ka">GEO</a><br>
+                                            <a href="{{Request::root()}}/lang/ru">RUS</a><br>
+                                        </div> 
+                                    </li>
+                                </ul> 
+                                @endif
+
+                                @if (app()->getLocale()=="ru")
+
+
+                                <ul>
+                                    <li><i class="fa fa-globe"></i> <a id="search" href="#">RUS <i class="fa fa-angle-down"></i></a>
+                                        <div class="search-box">
+                                            <a href="{{Request::root()}}/lang/ka">GEO</a><br>
+                                            <a href="{{Request::root()}}/lang/en">ENG</a><br>
                                         </div> 
                                     </li>
                                 </ul>
+                                    
+                                @endif
+
+
+
+                              
+
+
+                               
+
+
+
+
                             </div> <!-- cart search -->
                         </nav>  <!-- nav -->
 

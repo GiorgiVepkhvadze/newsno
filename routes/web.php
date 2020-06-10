@@ -25,7 +25,7 @@ Route::get('/sno_mineral', 'ClientController@sno_mineral')->name('sno_mineral');
 Route::get('/sno_limoni', 'ClientController@sno_limoni')->name('sno_limoni');
 
 Route::get('/kobi_likage', 'ClientController@kobi_likage')->name('kobi_likage');
-
+Route::get('/contact', 'ClientController@contact')->name('contact');
 
 
 
