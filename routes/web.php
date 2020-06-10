@@ -29,7 +29,14 @@ Route::get('/contact', 'ClientController@contact')->name('contact');
 
 
 
+Route::get('/snoadmin', function ()    {
+    return view('snoadmin/main');
+});
 
+
+
+######################## ADMIN SIDE
+Route::get('/snoadmin/home', 'AdminController@home')->name('admin_home');
 
 
 
