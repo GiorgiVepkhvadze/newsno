@@ -66,18 +66,11 @@
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav m-auto">
-                                    
 
                                     <li class="nav-item">
-                                        <a class="active" href="{{Request::root()}}/about">{{ __('main.COMPANY') }}</a>
-                                               <ul class="sub-menu">
-                                                   <li class="li"><a href="{{Request::root()}}/about">{{ __('main.COMPANY_AQVAGEO') }}</a></li>
-                                                   <li class="li"><a href="{{Request::root()}}/gols">{{ __('main.COMPANY_GOLS') }}</a></li>
-                                                   <li class="li"><a href="{{Request::root()}}/production">{{ __('main.COMAPNY_INDUSTY') }}</a></li>
-                                                   
-                                               </ul>
+                                        <a href="{{Request::root()}}/about" class="active">{{ __('main.COMPANY') }}</a>
                                     </li>
-                                    
+
                                     <li class="nav-item">
                                         <a class="active" href="{{Request::root()}}/sno_likage">{{ __('main.SNO') }}</a>
                                         <ul class="sub-menu">
@@ -103,6 +96,10 @@
                                     
                                     <li class="nav-item">
                                         <a href="{{Request::root()}}/export" class="active">{{ __('main.EXPORT') }}</a>
+                                   </li>
+
+                                   <li class="nav-item">
+                                    <a href="{{Request::root()}}/order" class="active">{{ __('main.ORDER') }}</a>
                                    </li>
 
                                    <li class="nav-item">

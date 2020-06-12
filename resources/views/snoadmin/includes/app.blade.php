@@ -119,6 +119,14 @@
 
 
                             <li>
+                                <a href="{{Request::root()}}/snoadmin/home">
+                                    <i data-feather="home"></i>
+                                    <span> კომპანია </span>
+                                </a>
+                            </li>
+
+
+                            <li>
                                 <a href="javascript: void(0);">
                                     <i data-feather="inbox"></i>
                                     <span> კომპანია </span>

@@ -26,6 +26,14 @@ Route::get('/sno_limoni', 'ClientController@sno_limoni')->name('sno_limoni');
 
 Route::get('/kobi_likage', 'ClientController@kobi_likage')->name('kobi_likage');
 Route::get('/contact', 'ClientController@contact')->name('contact');
+Route::get('/order', 'ClientController@contact')->name('order');
+
+
+
+
+
+
+
 
 
 
