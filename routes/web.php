@@ -28,7 +28,8 @@ Route::get('/kobi_likage', 'ClientController@kobi_likage')->name('kobi_likage');
 Route::get('/contact', 'ClientController@contact')->name('contact');
 Route::get('/order', 'ClientController@contact')->name('order');
 
-
+Route::get('/blog', 'BlogController@all')->name('blog');
+Route::get('/open_blog/{id}', 'BlogController@show_current_blog');
 
 
 
