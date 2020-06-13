@@ -1,103 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>SNO ADMIN AREA</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-        <!-- App css -->
-        <link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-
-    </head>
-
-    <body class="authentication-bg">
-        
-        <div class="account-pages my-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <div class="card">
-                            <div class="card-body p-0">
-                                <div class="row">
-                                    <div class="col-md-6 p-5">
-                                        <div class="mx-auto mb-5">
-                                            
-                                        </div>
-
-                                        <h6 class="h5 mb-0 mt-4">ადმინისტრატორის პანელი</h6>
-                                        <p class="text-muted mt-1 mb-4">არასანქცირებული შეღწევა ან შეღწევის მცდელობა ისჯება სისხლის სამართლი კანონმდებლობით.</p>
-
-                                        <form method="POST" class="authentication-form" action="{{ route('login') }}">
-                                            @csrf
-
-
-                                            <div class="form-group">
-                                               
-                                                <div class="input-group input-group-merge">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="icon-dual" data-feather="mail"></i>
-                                                        </span>
-                                                    </div>
-                                                    <input type="email" name="email" value="{{ old('email') }}" class="form-control" id="email" placeholder="შეიყვანეთ ელფოსტა" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group mt-4">
-                                                <div class="input-group input-group-merge">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="icon-dual" data-feather="lock"></i>
-                                                        </span>
-                                                    </div>
-                                                    <input type="password" class="form-control" id="password"  name="password"  placeholder="შეიყვანეთ პაროლი" required>
-                                                </div>
-                                            </div>
-
-                                        
-
-                                            <div class="form-group mb-0 text-center">
-                                                <button class="btn btn-primary btn-block" type="submit"> ავტორიზაცია
-                                                </button>
-                                            </div>
-                                        </form>
-
-
-                                        
-                                    </div>
-                                    <div class="col-lg-6 d-none d-md-inline-block">
-                                        <div class="auth-page-sidebar">
-                                            <div class="overlay"></div>
-                                            <div class="auth-user-testimonial">
-                                            </div>
-                                        </div>
-                                    </div>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>VGIO PANEL</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{{asset('admin/css/bootstrap.min.css')}}">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="{{asset('admin/css/typography.css')}}">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{{asset('admin/css/responsive.css')}}">
+   </head>
+   <body>
+      <!-- loader Start -->
+      <div id="loading">
+         <div id="loading-center">
+         </div>
+      </div>
+      <!-- loader END -->
+        <!-- Sign in Start -->
+        <section class="sign-in-page">
+            <div class="container sign-in-page-bg mt-5 p-0">
+                <div class="row no-gutters">
+                    <div class="col-md-6 text-center">
+                        <div class="sign-in-detail text-white">
+                            <a class="sign-in-logo mb-5" href="#"><img src="{{Request::root()}}/admin/images/logo-white.png" class="img-fluid" alt="logo"></a>
+                            <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
+                                <div class="item">
+                                    <img src="{{Request::root()}}/admin/images/login/1.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Manage your orders</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
                                 </div>
-                                
-                            </div> <!-- end card-body -->
+                                <div class="item">
+                                    <img src="{{Request::root()}}/admin/images/login/2.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Manage your orders</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </div>
+                                <div class="item">
+                                    <img src="{{Request::root()}}/admin/images/login/3.png" class="img-fluid mb-4" alt="logo">
+                                    <h4 class="mb-1 text-white">Manage your orders</h4>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                                </div>
+                            </div>
                         </div>
-
-                    </div> <!-- end col -->
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <div class="sign-in-from">
+                            <h1 class="mb-0">ავტორიზაცია</h1>
+                            <p>არანსაქცირებული შეღწევა ან შეღწევის მცდელობა ისჯება სისხლის სამართლის კოდექსით.</p>
+                            <form method="POST" class="mt-4" action="{{ route('login') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="ჩაწერეთ ელექტორნული ფოსტა" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password"  name="password" class="form-control mb-0" id="exampleInputPassword1" placeholder="ჩაწერეთ პაროლი" autocomplete="off">
+                                </div>
+                                <div class="d-inline-block w-100">
+                                  
+                                    <button type="submit" class="btn btn-primary float-right">შესვლა</button>
+                                </div>
+                               
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <!-- end row -->
             </div>
-            <!-- end container -->
-        </div>
-        <!-- end page -->
-
-        <!-- Vendor js -->
-        <script src="{{asset('admin/assets/js/vendor.min.js')}}"></script>
-
-        <!-- App js -->
-        <script src="{{asset('admin/assets/js/app.min.js')}}"></script>
-        
-    </body>
+        </section>
+        <!-- Sign in END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="{{asset('admin/js/jquery.min.js')}}"></script>
+      <script src="{{asset('admin/js/popper.min.js')}}"></script>
+      <script src="{{asset('admin/js/bootstrap.min.js')}}"></script>
+      <!-- Appear JavaScript -->
+      <script src="{{asset('admin/js/jquery.appear.js')}}"></script>
+      <!-- Countdown JavaScript -->
+      <script src="{{asset('admin/js/countdown.min.js')}}"></script>
+      <!-- Counterup JavaScript -->
+      <script src="{{asset('admin/js/waypoints.min.js')}}"></script>
+      <script src="{{asset('admin/js/jquery.counterup.min.js')}}"></script>
+      <!-- Wow JavaScript -->
+      <script src="{{asset('admin/js/wow.min.js')}}"></script>
+      <!-- Apexcharts JavaScript -->
+      <script src="{{asset('admin/js/apexcharts.js')}}"></script>
+      <!-- Slick JavaScript -->
+      <script src="{{asset('admin/js/slick.min.js')}}"></script>
+      <!-- Select2 JavaScript -->
+      <script src="{{asset('admin/js/select2.min.js')}}"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="{{asset('admin/js/owl.carousel.min.js')}}"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="{{asset('admin/js/jquery.magnific-popup.min.js')}}"></script>
+      <!-- Smooth Scrollbar JavaScript -->
+      <script src="{{asset('admin/js/smooth-scrollbar.js')}}"></script>
+      <!-- Chart Custom JavaScript -->
+      <script src="{{asset('admin/js/chart-custom.js')}}"></script>
+      <!-- Custom JavaScript -->
+      <script src="{{asset('admin/js/custom.js')}}"></script>
+   </body>
 </html>

@@ -26,21 +26,23 @@ class BlogController extends Controller
 
     public function show_current_blog($id)
     {
- 
     $cBlog = Blog::getBlogDetails($id);
+    $lang = app()->getLocale();
+    $blog_text = "blog_text_".$lang;
+    $blog_title = "blog_title_".$lang;
     
-    return view('blog_details')->with(compact('cBlog'));
+    return view('blog_details')->with(compact('cBlog', 'lang', 'blog_text', 'blog_title'));
 
     }
-
-
 
 
     public function all()
     {
         $BlogData = Blog::getBlogData_all();
-      //  dd($BlogData);
-        return view('blog')->with("BlogData",$BlogData);
+        $lang = app()->getLocale();
+        $blog_text = "blog_text_".$lang;
+        $blog_title = "blog_title_".$lang;
+        return view('blog')->with(compact('BlogData', 'lang', 'blog_text', 'blog_title'));
         
     }
 
