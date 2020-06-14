@@ -92,7 +92,6 @@ class AdminController extends Controller
         $eng_text = $info->company_mizani_en;
         $rus_text = $info->company_mizani_ru;
         $router_url = $root."/snoadmin/company_mizani";
-
         return view('snoadmin/text_editor')->with(compact('geo_text', 'eng_text', 'rus_text', 'router_url'));   
 
     }
@@ -109,6 +108,40 @@ class AdminController extends Controller
 
     }
 
+
+    
+    public function company_sawarmo(){
+        $root = request()->root();
+        $info = Company::get_company_data();
+        $company_sawarmo_piveli_ka = $info->company_sawarmo_piveli_ka;
+        $company_sawarmo_piveli_en = $info->company_sawarmo_piveli_en;
+        $company_sawarmo_piveli_ru = $info->company_sawarmo_piveli_ru;
+
+        $company_sawarmo_meore_ka = $info->company_sawarmo_meore_ka;
+        $company_sawarmo_meore_ru = $info->company_sawarmo_meore_ru;
+        $company_sawarmo_meore_en = $info->company_sawarmo_meore_en;
+
+        return view('snoadmin/warmoeba_editor')->with(compact('company_sawarmo_piveli_ka', 'company_sawarmo_piveli_en', 'company_sawarmo_piveli_ru', 'company_sawarmo_meore_ka', 'company_sawarmo_meore_ru', 'company_sawarmo_meore_en'));   
+
+    }
+
+
+    public function company_sawarmo_update(Request $request){
+        $info = Company::where('company_id', '=', '1')->first();
+
+        $info->company_sawarmo_piveli_ka=$request->company_sawarmo_piveli_ka;
+        $info->company_sawarmo_piveli_en=$request->company_sawarmo_piveli_en; 
+        $info->company_sawarmo_piveli_ru=$request->company_sawarmo_piveli_ru;
+
+        $info->company_sawarmo_meore_ka=$request->company_sawarmo_meore_ka;
+        $info->company_sawarmo_meore_ru=$request->company_sawarmo_meore_ru; 
+        $info->company_sawarmo_meore_en=$request->company_sawarmo_meore_en;
+
+
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
 
 
 

@@ -58,7 +58,7 @@ Route::post('/snoadmin/company_mizani', 'AdminController@company_mizani_update')
 
 
 Route::get('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo')->name('company_sawarmo');
-
+Route::post('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo_update')->name('company_sawarmo_update');
 
 
 
