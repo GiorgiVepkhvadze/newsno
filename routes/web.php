@@ -45,8 +45,18 @@ Route::post('/snoadmin/company_header', 'AdminController@company_header_update')
 
 
 Route::get('/snoadmin/company_header_image', 'AdminController@company_header_image')->name('company_header_image');
+
 Route::get('/snoadmin/company_sveti', 'AdminController@company_sveti')->name('company_sveti');
+Route::post('/snoadmin/company_sveti', 'AdminController@company_sveti_update')->name('update_company_sveti');
+
+
 Route::get('/snoadmin/company_mizani', 'AdminController@company_mizani')->name('company_mizani');
+Route::post('/snoadmin/company_mizani', 'AdminController@company_mizani_update')->name('company_mizani_update');
+
+
+
+
+
 Route::get('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo')->name('company_sawarmo');
 
 
