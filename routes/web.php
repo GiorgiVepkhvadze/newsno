@@ -68,6 +68,19 @@ Route::get('/snoadmin/eqsport_sveti', 'AdminController@eqsport_sveti')->name('eq
 Route::post('/snoadmin/eqsport_sveti', 'AdminController@eqsport_sveti_update')->name('eqsport_sveti_update');
 
 
+Route::get('/snoadmin/add_blog', 'AdminController@add_blog')->name('admin_add_blog');
+Route::post('/snoadmin/add_blog', 'AdminController@add_blog_insert')->name('admin_add_blog_insert');
+
+Route::get('/snoadmin/all_blog', 'AdminController@list_blog')->name('admin_blog_all');
+
+
+
+
+
+
+Route::get('/snoadmin/blog_drop/{id}', 'AdminController@drop_blog')->name('admin_blog_delete');
+
+
 
 
 

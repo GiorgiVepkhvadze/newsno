@@ -83,6 +83,14 @@
                         </ul>
                      </li>
 
+                     <li>
+                        <a href="#blogi" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>ბლოგი</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="blogi" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="{{Request::root()}}/snoadmin/add_blog"><i class="ri-device-fill"></i>ახალი ბლოგი</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>გამოქვეყნებული ბლოგი</a></li>
+                        </ul>
+                     </li>
+
 
 
 

@@ -28,7 +28,7 @@
                         <div class="blog-thum">
                             
 
-                            <img src="{{ $Blogdata_row->blog_main_pic }}" alt="AQVAGEO">
+                            <img src="{{Request::root()}}/images/{{ $Blogdata_row->blog_main_pic }}" alt="AQVAGEO">
                             <div class="date text-center">
                                 
                                 <span>{{ $Blogdata_row->blog_time }}</span>

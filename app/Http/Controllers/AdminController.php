@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Company;
 use App\Eksporti;
+use Image;
+use App\Blog;
 
 class AdminController extends Controller
 {
@@ -176,6 +178,65 @@ class AdminController extends Controller
         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
 
     }
+
+
+    public function add_blog()
+    {
+
+        return view('snoadmin/add_blog');
+    }
+
+
+
+    public function add_blog_insert(Request $request){
+
+        $ldate = date('Y-m-d H:i:s');
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $blog = new Blog();
+         $blog->blog_title_ka = $request->blog_title_ka;
+         $blog->blog_title_en = $request->blog_title_en;
+         $blog->blog_title_ru = $request->blog_title_ru;
+
+         $blog->blog_text_ka = $request->blog_text_ka;
+         $blog->blog_text_en = $request->blog_text_en;
+         $blog->blog_text_ru = $request->blog_text_ru;
+         
+         $blog->blog_time = $ldate;
+
+         $blog_main_pic= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($blog_main_pic);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->fit(1170,450);
+         $thumbnailImage->save($thumbnailPath.time().$blog_main_pic->getClientOriginalName());
+         $blog_detail_pic = time().$blog_main_pic->getClientOriginalName();
+
+         $blog->blog_main_pic = $blog_detail_pic;
+         $blog->blog_detail_pic = $blog_detail_pic;
+         $blog->blog_readed = 0;
+         
+
+         $blog->save();
+
+         return back()->with('success', 'Your images has been successfully Upload');
+   
+    }
+
+
+    public function list_blog(){
+
+        $Blog = Blog::getBlogData_all();
+        return view('snoadmin/all_blog')->with(compact('Blog'));
+
+
+    }
+
+
+   
+
 
 
     

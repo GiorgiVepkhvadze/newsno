@@ -20,7 +20,7 @@ class Blog extends Model
       }
 
       public static function getBlogData_all(){
-        $value=DB::table('blog')->orderBy('blog_id', 'asc')->get();
+        $value=DB::table('blog')->orderBy('blog_id', 'desc')->get();
         return $value;
       }
 
