@@ -54,11 +54,21 @@ Route::get('/snoadmin/company_mizani', 'AdminController@company_mizani')->name('
 Route::post('/snoadmin/company_mizani', 'AdminController@company_mizani_update')->name('company_mizani_update');
 
 
-
-
-
 Route::get('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo')->name('company_sawarmo');
 Route::post('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo_update')->name('company_sawarmo_update');
+
+
+
+
+
+Route::get('/snoadmin/eqsport_header_image', 'AdminController@eqsport_header_image')->name('eqsport_header_image');
+
+
+Route::get('/snoadmin/eqsport_sveti', 'AdminController@eqsport_sveti')->name('eqsport_sveti');
+Route::post('/snoadmin/eqsport_sveti', 'AdminController@eqsport_sveti_update')->name('eqsport_sveti_update');
+
+
+
 
 
 

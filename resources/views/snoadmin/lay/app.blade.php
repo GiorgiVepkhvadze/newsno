@@ -75,6 +75,14 @@
                         </ul>
                      </li>
 
+                     <li>
+                        <a href="#eksporti" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>ექსპორტი</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="eksporti" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="{{Request::root()}}/snoadmin/eqsport_header_image"><i class="ri-device-fill"></i> საბანერო ფოტო</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/eqsport_sveti"><i class="ri-toggle-fill"></i>ორსვეტიანი ტექსტი</a></li>
+                        </ul>
+                     </li>
+
 
 
 

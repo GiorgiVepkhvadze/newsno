@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Company;
+use App\Eksporti;
 
 class AdminController extends Controller
 {
@@ -142,6 +143,45 @@ class AdminController extends Controller
         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
 
     }
+
+
+
+    public function eqsport_sveti(){
+        $root = request()->root();
+        $info = Eksporti::get_company_data();
+
+        $eksporti_pirveli_ka =  $info->eksporti_pirveli_ka;
+        $eksporti_pirveli_en =  $info->eksporti_pirveli_en;
+        $eksporti_pirveli_ru =  $info->eksporti_pirveli_ru;
+
+        $eksporti_meore_ka =  $info->eksporti_meore_ka;
+        $eksporti_meore_en =  $info->eksporti_meore_en;
+        $eksporti_meore_ru =  $info->eksporti_meore_ru;
+        
+        return view('snoadmin/eqsporti_editor')->with(compact('eksporti_pirveli_ka', 'eksporti_pirveli_en', 'eksporti_pirveli_ru', 'eksporti_meore_ka', 'eksporti_meore_en', 'eksporti_meore_ru'));   
+
+    }
+
+    public function eqsport_sveti_update(Request $request){
+        $info = Eksporti::where('eksporti_id', '=', '1')->first();
+
+        $info->eksporti_pirveli_ka=$request->eksporti_pirveli_ka;
+        $info->eksporti_pirveli_en=$request->eksporti_pirveli_en; 
+        $info->eksporti_pirveli_ru=$request->eksporti_pirveli_ru;
+
+        $info->eksporti_meore_ka=$request->eksporti_meore_ka;
+        $info->eksporti_meore_en=$request->eksporti_meore_en; 
+        $info->eksporti_meore_ru=$request->eksporti_meore_ru;
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+    
+
+
+    
 
 
 
