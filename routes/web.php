@@ -87,5 +87,17 @@ Route::post('/snoadmin/sno_likage_update_image_two', 'AdminController@sno_likage
 
 
 
+Route::get('/snoadmin/sno_mineral', 'AdminController@sno_mineral')->name('sno_mineral');
+Route::post('/snoadmin/sno_mineral', 'AdminController@sno_mineral_update')->name('sno_mineral_update');
+
+
+Route::post('/snoadmin/sno_mineral_update_image_one', 'AdminController@sno_mineral_update_image_one')->name('sno_mineral_update_image_one');
+Route::post('/snoadmin/sno_mineral_update_image_two', 'AdminController@sno_mineral_update_image_two')->name('sno_mineral_update_image_two');
+Route::post('/snoadmin/sno_mineral_update_image_three', 'AdminController@sno_mineral_update_image_three')->name('sno_mineral_update_image_three');
+
+
+
+
+
 
 

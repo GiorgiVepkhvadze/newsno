@@ -97,8 +97,8 @@
                         <a href="#sno" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>სნო</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="sno" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="{{Request::root()}}/snoadmin/sno_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
-                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
-                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/sno_mineral"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>წყლის ხარისხი</a></li>
                         </ul>
                      </li>

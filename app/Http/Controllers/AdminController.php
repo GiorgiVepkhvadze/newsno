@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Company;
 use App\Eksporti;
 use App\Snolikage;
+use App\Snomineral;
 use Image;
 use App\Blog;
 use DB;
@@ -337,6 +338,147 @@ class AdminController extends Controller
 
          $info = Snolikage::where('sno_likage_id', '=', '1')->first();
          $info->sno_likage_image2=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+    
+    public function sno_mineral(){
+        $root = request()->root();
+        $info = Snomineral::get_sno_mineral();
+
+        $sno_mineral_pirveli_ka =  $info->sno_mineral_pirveli_ka;
+        $sno_mineral_pirveli_en =  $info->sno_mineral_pirveli_en;
+        $sno_mineral_pirveli_ru =  $info->sno_mineral_pirveli_ru;
+
+      
+        $sno_mineral_meore_ka =  $info->sno_mineral_meore_ka;
+        $sno_mineral_meore_en =  $info->sno_mineral_meore_en;
+        $sno_mineral_meore_ru =  $info->sno_mineral_meore_ru;
+
+        $sno_mineral_mesame_ka =  $info->sno_mineral_mesame_ka;
+        $sno_mineral_mesame_ru =  $info->sno_mineral_mesame_ru;
+        $sno_mineral_mesame_en =  $info->sno_mineral_mesame_en;
+
+        $sno_mineral_meotxe_ka =  $info->sno_mineral_meotxe_ka;
+        $sno_mineral_meotxe_en =  $info->sno_mineral_meotxe_en;
+        $sno_mineral_meotxe_ru =  $info->sno_mineral_meotxe_ru;
+
+
+        $sno_mineral_mexute_ka =  $info->sno_mineral_mexute_ka;
+        $sno_mineral_mexute_en =  $info->sno_mineral_mexute_en;
+        $sno_mineral_mexute_ru =  $info->sno_mineral_mexute_ru;
+
+        $sno_mineral_image1 =  $info->sno_mineral_image1;
+        $sno_mineral_image2 =  $info->sno_mineral_image2;
+        $sno_mineral_image3 =  $info->sno_mineral_image3;
+
+        
+        return view('snoadmin/sno_mineral_editor')->with(compact('sno_mineral_image3', 'sno_mineral_image2', 'sno_mineral_image1', 'sno_mineral_mexute_ru', 'sno_mineral_mexute_en', 'sno_mineral_mexute_ka', 'sno_mineral_meotxe_ru', 'sno_mineral_meotxe_en', 'sno_mineral_meotxe_ka', 'sno_mineral_mesame_en', 'sno_mineral_mesame_ru', 'sno_mineral_mesame_ka', 'sno_mineral_meore_ru', 'sno_mineral_meore_en', 'sno_mineral_meore_ka', 'sno_mineral_pirveli_ru', 'sno_mineral_pirveli_en', 'sno_mineral_pirveli_ka'));   
+
+
+    }
+    
+
+
+    
+    public function sno_mineral_update(Request $request){
+        $info = Snomineral::where('sno_mineral_id', '=', '1')->first();
+
+        $info->sno_mineral_pirveli_ka=$request->sno_mineral_pirveli_ka;
+        $info->sno_mineral_pirveli_en=$request->sno_mineral_pirveli_en;
+        $info->sno_mineral_pirveli_ru=$request->sno_mineral_pirveli_ru;
+
+        $info->sno_mineral_meore_ka=$request->sno_mineral_meore_ka;
+        $info->sno_mineral_meore_en=$request->sno_mineral_meore_en;
+        $info->sno_mineral_meore_ru=$request->sno_mineral_meore_ru;
+
+        $info->sno_mineral_mesame_ka=$request->sno_mineral_mesame_ka;
+        $info->sno_mineral_mesame_ru=$request->sno_mineral_mesame_ru;
+        $info->sno_mineral_mesame_en=$request->sno_mineral_mesame_en;
+
+        $info->sno_mineral_meotxe_ka=$request->sno_mineral_meotxe_ka;
+        $info->sno_mineral_meotxe_en=$request->sno_mineral_meotxe_en;
+        $info->sno_mineral_meotxe_ru=$request->sno_mineral_meotxe_ru;
+
+        $info->sno_mineral_mexute_ka=$request->sno_mineral_mexute_ka;
+        $info->sno_mineral_mexute_en=$request->sno_mineral_mexute_en;
+        $info->sno_mineral_mexute_ru=$request->sno_mineral_mexute_ru;
+
+
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+
+    public function sno_mineral_update_image_one(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Snomineral::where('sno_mineral_id', '=', '1')->first();
+         $info->sno_mineral_image1=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+
+    public function sno_mineral_update_image_two(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Snomineral::where('sno_mineral_id', '=', '1')->first();
+         $info->sno_mineral_image2=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+    
+
+    public function sno_mineral_update_image_three(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Snomineral::where('sno_mineral_id', '=', '1')->first();
+         $info->sno_mineral_image3=$image_one;
          $info->save();
         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
 
