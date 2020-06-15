@@ -100,4 +100,16 @@ Route::post('/snoadmin/sno_mineral_update_image_three', 'AdminController@sno_min
 
 
 
+Route::get('/snoadmin/sno_xarisxi', 'AdminController@sno_xarisxi')->name('sno_xarisxi');
+Route::post('/snoadmin/sno_xarisxi', 'AdminController@sno_xarisxi_update')->name('sno_xarisxi_update');
+
+
+Route::post('/snoadmin/sno_xarisxi_update_image_one', 'AdminController@sno_xarisxi_update_image_one')->name('sno_xarisxi_update_image_one');
+Route::post('/snoadmin/sno_xarisxi_update_image_two', 'AdminController@sno_xarisxi_update_image_two')->name('sno_xarisxi_update_image_two');
+Route::post('/snoadmin/sno_xarisxi_update_image_three', 'AdminController@sno_xarisxi_update_image_three')->name('sno_xarisxi_update_image_three');
+
+
+
+
+
 
