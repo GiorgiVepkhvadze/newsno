@@ -11,7 +11,7 @@
                     @foreach($cBlog as $cBlog_row)
                     <div class="blog-details-image pb-20">
                         <br><br>
-                        <img src="{{ $cBlog_row->blog_main_pic }}" alt="{!! $cBlog_row->$blog_title !!}">
+                        <img src="{{Request::root()}}/images/{{ $cBlog_row->blog_main_pic }}" alt="{!! $cBlog_row->$blog_title !!}">
                     </div>
                     <div class="blog-details-content">
                         <div class="row">
