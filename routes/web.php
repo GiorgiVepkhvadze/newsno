@@ -80,7 +80,6 @@ Route::get('/snoadmin/blog_drop/{id}', 'AdminController@drop_blog')->name('admin
 
 Route::get('/snoadmin/sno_likage', 'AdminController@sno_likage')->name('sno_likage');
 Route::post('/snoadmin/sno_likage', 'AdminController@sno_likage_update')->name('sno_likage_update');
-
 Route::post('/snoadmin/sno_likage_update_image_one', 'AdminController@sno_likage_update_image_one')->name('sno_likage_update_image_one');
 Route::post('/snoadmin/sno_likage_update_image_two', 'AdminController@sno_likage_update_image_two')->name('sno_likage_update_image_two');
 
