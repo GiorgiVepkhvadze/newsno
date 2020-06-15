@@ -34,8 +34,8 @@
                                        <td>{{{$item->blog_title_ka}}}</td>
                                        <td>{{{$item->blog_readed}}}</td>
                                        <td>{{{$item->blog_time}}}</td>
-                                       <td>{{{$item->blog_id}}}</td>
-                                       <td>{{{$item->blog_id}}}</td>
+                                       <td><a href='{{Request::root()}}/snoadmin/blog_edit/{{{$item->blog_id}}}'>ცვლილება</a></td>
+                                       <td><a href='{{Request::root()}}/snoadmin/blog_drop/{{{$item->blog_id}}}'>წაშლა</a></td>
                                        
                                     </tr>
                                    

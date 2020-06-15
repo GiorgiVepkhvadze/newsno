@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>XRay - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>VGIO ADMIN PANEL</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
@@ -25,7 +25,7 @@
 
 
    </head>
-   <body class="sidebar-main-menu">
+   <body class="sidebar-main-menu sidebar-main">
       <!-- loader Start -->
       <div id="loading">
          <div id="loading-center">
@@ -91,6 +91,17 @@
                         </ul>
                      </li>
 
+
+
+                     <li>
+                        <a href="#sno" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>სნო</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sno" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="{{Request::root()}}/snoadmin/sno_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>მინერალიზაცია და ინგრედიენტები</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/all_blog"><i class="ri-toggle-fill"></i>წყლის ხარისხი</a></li>
+                        </ul>
+                     </li>
 
 
 

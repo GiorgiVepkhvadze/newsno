@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Company;
 use App\Eksporti;
+use App\Snolikage;
 use Image;
 use App\Blog;
+use DB;
 
 class AdminController extends Controller
 {
@@ -234,8 +236,112 @@ class AdminController extends Controller
 
     }
 
+    public function drop_blog($id){
 
-   
+        DB::table('blog')->where('blog_id',$id)->delete();
+        return back();
+    
+        
+    }
+
+
+
+    public function sno_likage(){
+        $root = request()->root();
+        $info = Snolikage::get_likage_data();
+
+
+
+
+        $sno_likage_text_pirveli_ka =  $info->sno_likage_text_pirveli_ka;
+        $sno_likage_text_pirveli_en =  $info->sno_likage_text_pirveli_en;
+        $sno_likage_text_pirveli_ru =  $info->sno_likage_text_pirveli_ru;
+
+        $sno_likage_text_meore_ka =  $info->sno_likage_text_meore_ka;
+        $sno_likage_text_meore_en =  $info->sno_likage_text_meore_en;
+        $sno_likage_text_meore_ru =  $info->sno_likage_text_meore_ru;
+
+        $sno_likage_text_mesame_ka =  $info->sno_likage_text_mesame_ka;
+        $sno_likage_text_mesame_ru =  $info->sno_likage_text_mesame_ru;
+        $sno_likage_text_mesame_en =  $info->sno_likage_text_mesame_en;
+
+        $sno_likage_image1 =  $info->sno_likage_image1;
+        $sno_likage_image2 =  $info->sno_likage_image2;
+        
+        return view('snoadmin/likage_editor')->with(compact('sno_likage_image2','sno_likage_image1','sno_likage_text_pirveli_ka', 'sno_likage_text_pirveli_en', 'sno_likage_text_pirveli_ru', 'sno_likage_text_meore_ka', 'sno_likage_text_meore_en', 'sno_likage_text_meore_ru', 'sno_likage_text_mesame_ka', 'sno_likage_text_mesame_en', 'sno_likage_text_mesame_ru'));   
+
+
+    }
+
+
+
+    public function sno_likage_update(Request $request){
+        $info = Snolikage::where('sno_likage_id', '=', '1')->first();
+
+        $info->sno_likage_text_pirveli_ka=$request->sno_likage_text_pirveli_ka;
+        $info->sno_likage_text_pirveli_en=$request->sno_likage_text_pirveli_en; 
+        $info->sno_likage_text_pirveli_ru=$request->sno_likage_text_pirveli_ru;
+
+        $info->sno_likage_text_meore_ka=$request->sno_likage_text_meore_ka;
+        $info->sno_likage_text_meore_en=$request->sno_likage_text_meore_en; 
+        $info->sno_likage_text_meore_ru=$request->sno_likage_text_meore_ru;
+
+        $info->sno_likage_text_mesame_ka=$request->sno_likage_text_mesame_ka;
+        $info->sno_likage_text_mesame_ru=$request->sno_likage_text_mesame_ru; 
+        $info->sno_likage_text_mesame_en=$request->sno_likage_text_mesame_en;
+
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+
+
+
+    public function sno_likage_update_image_one(Request $request){
+        $randomi = time();
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+         $info = Snolikage::where('sno_likage_id', '=', '1')->first();
+         $info->sno_likage_image1=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+    public function sno_likage_update_image_two(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Snolikage::where('sno_likage_id', '=', '1')->first();
+         $info->sno_likage_image2=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+    
 
 
 
