@@ -30,8 +30,9 @@ class BlogController extends Controller
     $lang = app()->getLocale();
     $blog_text = "blog_text_".$lang;
     $blog_title = "blog_title_".$lang;
+    $Blog = Blog::find($id);
     
-    return view('blog_details')->with(compact('cBlog', 'lang', 'blog_text', 'blog_title'));
+    return view('blog_details')->with(compact('cBlog', 'lang', 'blog_text', 'blog_title','Blog'));
 
     }
 

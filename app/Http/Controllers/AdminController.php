@@ -8,6 +8,13 @@ use App\Eksporti;
 use App\Snolikage;
 use App\Snomineral;
 use App\Snoxarisxi;
+
+use App\Kobilikage;
+use App\Kobimineral;
+use App\Kobixarisxi;
+
+use App\Contact;
+
 use Image;
 use App\Blog;
 use DB;
@@ -234,8 +241,50 @@ class AdminController extends Controller
 
         $Blog = Blog::getBlogData_all();
         return view('snoadmin/all_blog')->with(compact('Blog'));
+    }
+
+    public function edit_blog($id)
+    {
+        $Blog = Blog::find($id);
+        return view('snoadmin/edit_blog', compact('Blog'));
+    }
+
+    public function edit_blog_update(Request $request, $id)
+    {
+        $ldate = date('Y-m-d H:i:s');
 
 
+
+         $blog = Blog::find($id);
+         $blog->blog_title_ka = $request->blog_title_ka;
+         $blog->blog_title_en = $request->blog_title_en;
+         $blog->blog_title_ru = $request->blog_title_ru;
+
+         $blog->blog_text_ka = $request->blog_text_ka;
+         $blog->blog_text_en = $request->blog_text_en;
+         $blog->blog_text_ru = $request->blog_text_ru;
+         
+         $blog->blog_time = $ldate;
+
+         if(request()->has('filesToUpload1'))
+         {
+            $blog_main_pic= $request->file('filesToUpload1');
+            $thumbnailImage = Image::make($blog_main_pic);
+            $thumbnailPath = public_path().'/images/';
+            $thumbnailImage->fit(1170,450);
+            $thumbnailImage->save($thumbnailPath.time().$blog_main_pic->getClientOriginalName());
+            $blog_detail_pic = time().$blog_main_pic->getClientOriginalName();
+   
+            $blog->blog_main_pic = $blog_detail_pic;
+            $blog->blog_detail_pic = $blog_detail_pic;
+            $blog->blog_readed = 0;
+         }
+
+         
+
+         $blog->save();
+
+         return back()->with('success', 'Your images has been successfully Upload');
     }
 
     public function drop_blog($id){
@@ -246,6 +295,360 @@ class AdminController extends Controller
         
     }
 
+    public function kobi_likage(){
+        $root = request()->root();
+        $info = Kobilikage::get_likage_data();
+
+
+        $kobi_likage_text_pirveli_ka =  $info->kobi_likage_text_pirveli_ka;
+        $kobi_likage_text_pirveli_en =  $info->kobi_likage_text_pirveli_en;
+        $kobi_likage_text_pirveli_ru =  $info->kobi_likage_text_pirveli_ru;
+
+        $kobi_likage_text_meore_ka =  $info->kobi_likage_text_meore_ka;
+        $kobi_likage_text_meore_en =  $info->kobi_likage_text_meore_en;
+        $kobi_likage_text_meore_ru =  $info->kobi_likage_text_meore_ru;
+
+        $kobi_likage_text_mesame_ka =  $info->kobi_likage_text_mesame_ka;
+        $kobi_likage_text_mesame_ru =  $info->kobi_likage_text_mesame_ru;
+        $kobi_likage_text_mesame_en =  $info->kobi_likage_text_mesame_en;
+
+        $kobi_likage_image1 =  $info->kobi_likage_image1;
+        $kobi_likage_image2 =  $info->kobi_likage_image2;
+        
+        return view('snoadmin/kobi/likage_editor_kobi')->with(compact('kobi_likage_image2','kobi_likage_image1','kobi_likage_text_pirveli_ka', 'kobi_likage_text_pirveli_en', 'kobi_likage_text_pirveli_ru', 'kobi_likage_text_meore_ka', 'kobi_likage_text_meore_en', 'kobi_likage_text_meore_ru', 'kobi_likage_text_mesame_ka', 'kobi_likage_text_mesame_en', 'kobi_likage_text_mesame_ru'));   
+    }
+
+    public function kobi_likage_update(Request $request){
+        $info = Kobilikage::where('kobi_likage_id', '=', '1')->first();
+
+        $info->kobi_likage_text_pirveli_ka=$request->kobi_likage_text_pirveli_ka;
+        $info->kobi_likage_text_pirveli_en=$request->kobi_likage_text_pirveli_en; 
+        $info->kobi_likage_text_pirveli_ru=$request->kobi_likage_text_pirveli_ru;
+
+        $info->kobi_likage_text_meore_ka=$request->kobi_likage_text_meore_ka;
+        $info->kobi_likage_text_meore_en=$request->kobi_likage_text_meore_en; 
+        $info->kobi_likage_text_meore_ru=$request->kobi_likage_text_meore_ru;
+
+        $info->kobi_likage_text_mesame_ka=$request->kobi_likage_text_mesame_ka;
+        $info->kobi_likage_text_mesame_ru=$request->kobi_likage_text_mesame_ru; 
+        $info->kobi_likage_text_mesame_en=$request->kobi_likage_text_mesame_en;
+
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+    public function kobi_likage_update_image_one(Request $request){
+        $randomi = time();
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $kobi_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($kobi_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+
+         $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+         $info = Kobilikage::where('kobi_likage_id', '=', '1')->first();
+         $info->kobi_likage_image1=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+    public function kobi_likage_update_image_two(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $kobi_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($kobi_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+
+         $info = Kobilikage::where('kobi_likage_id', '=', '1')->first();
+         $info->kobi_likage_image2=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+    public function kobi_mineral(){
+        $root = request()->root();
+        $info = Kobimineral::get_kobi_mineral();
+
+        $kobi_mineral_pirveli_ka =  $info->kobi_mineral_pirveli_ka;
+        $kobi_mineral_pirveli_en =  $info->kobi_mineral_pirveli_en;
+        $kobi_mineral_pirveli_ru =  $info->kobi_mineral_pirveli_ru;
+
+      
+        $kobi_mineral_meore_ka =  $info->kobi_mineral_meore_ka;
+        $kobi_mineral_meore_en =  $info->kobi_mineral_meore_en;
+        $kobi_mineral_meore_ru =  $info->kobi_mineral_meore_ru;
+
+        $kobi_mineral_mesame_ka =  $info->kobi_mineral_mesame_ka;
+        $kobi_mineral_mesame_ru =  $info->kobi_mineral_mesame_ru;
+        $kobi_mineral_mesame_en =  $info->kobi_mineral_mesame_en;
+
+        $kobi_mineral_meotxe_ka =  $info->kobi_mineral_meotxe_ka;
+        $kobi_mineral_meotxe_en =  $info->kobi_mineral_meotxe_en;
+        $kobi_mineral_meotxe_ru =  $info->kobi_mineral_meotxe_ru;
+
+
+        $kobi_mineral_mexute_ka =  $info->kobi_mineral_mexute_ka;
+        $kobi_mineral_mexute_en =  $info->kobi_mineral_mexute_en;
+        $kobi_mineral_mexute_ru =  $info->kobi_mineral_mexute_ru;
+
+        $kobi_mineral_image1 =  $info->kobi_mineral_image1;
+        $kobi_mineral_image2 =  $info->kobi_mineral_image2;
+        $kobi_mineral_image3 =  $info->kobi_mineral_image3;
+        
+        return view('snoadmin/kobi/kobi_mineral_editor')->with(compact('kobi_mineral_image3', 'kobi_mineral_image2', 'kobi_mineral_image1', 'kobi_mineral_mexute_ru', 'kobi_mineral_mexute_en', 'kobi_mineral_mexute_ka', 'kobi_mineral_meotxe_ru', 'kobi_mineral_meotxe_en', 'kobi_mineral_meotxe_ka', 'kobi_mineral_mesame_en', 'kobi_mineral_mesame_ru', 'kobi_mineral_mesame_ka', 'kobi_mineral_meore_ru', 'kobi_mineral_meore_en', 'kobi_mineral_meore_ka', 'kobi_mineral_pirveli_ru', 'kobi_mineral_pirveli_en', 'kobi_mineral_pirveli_ka'));   
+    }
+
+    public function kobi_mineral_update(Request $request){
+        $info = Kobimineral::where('kobi_mineral_id', '=', '1')->first();
+
+        $info->kobi_mineral_pirveli_ka=$request->kobi_mineral_pirveli_ka;
+        $info->kobi_mineral_pirveli_en=$request->kobi_mineral_pirveli_en;
+        $info->kobi_mineral_pirveli_ru=$request->kobi_mineral_pirveli_ru;
+
+        $info->kobi_mineral_meore_ka=$request->kobi_mineral_meore_ka;
+        $info->kobi_mineral_meore_en=$request->kobi_mineral_meore_en;
+        $info->kobi_mineral_meore_ru=$request->kobi_mineral_meore_ru;
+
+        $info->kobi_mineral_mesame_ka=$request->kobi_mineral_mesame_ka;
+        $info->kobi_mineral_mesame_ru=$request->kobi_mineral_mesame_ru;
+        $info->kobi_mineral_mesame_en=$request->kobi_mineral_mesame_en;
+
+        $info->kobi_mineral_meotxe_ka=$request->kobi_mineral_meotxe_ka;
+        $info->kobi_mineral_meotxe_en=$request->kobi_mineral_meotxe_en;
+        $info->kobi_mineral_meotxe_ru=$request->kobi_mineral_meotxe_ru;
+
+        $info->kobi_mineral_mexute_ka=$request->kobi_mineral_mexute_ka;
+        $info->kobi_mineral_mexute_en=$request->kobi_mineral_mexute_en;
+        $info->kobi_mineral_mexute_ru=$request->kobi_mineral_mexute_ru;
+
+
+        $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+
+    public function kobi_mineral_update_image_one(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+        
+         $randomi = time();
+        
+         $kobi_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($kobi_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+        
+         $info = Kobimineral::where('kobi_mineral_id', '=', '1')->first();
+         $info->kobi_mineral_image1=$image_one;
+         $info->save();
+         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+        
+        }
+        
+        
+        
+        public function kobi_mineral_update_image_two(Request $request){
+        
+        
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+        
+         $randomi = time();
+        
+         $kobi_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($kobi_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+        
+         $info = Kobimineral::where('kobi_mineral_id', '=', '1')->first();
+         $info->kobi_mineral_image2=$image_one;
+         $info->save();
+         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+        
+        }
+        
+        
+        public function kobi_mineral_update_image_three(Request $request){
+        
+        
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+        
+         $randomi = time();
+        
+         $kobi_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($kobi_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+        
+         $info = Kobimineral::where('kobi_mineral_id', '=', '1')->first();
+         $info->kobi_mineral_image3=$image_one;
+         $info->save();
+         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+        
+        }
+
+
+        public function kobi_xarisxi(){
+            $root = request()->root();
+            $info = Kobixarisxi::get_kobi_xarisxi();
+    
+            $kobi_mineral_pirveli_ka =  $info->kobi_xarisxi_pirveli_ka;
+            $kobi_mineral_pirveli_en =  $info->kobi_xarisxi_pirveli_en;
+            $kobi_mineral_pirveli_ru =  $info->kobi_xarisxi_pirveli_ru;
+    
+          
+            $kobi_mineral_meore_ka =  $info->kobi_xarisxi_meore_ka;
+            $kobi_mineral_meore_en =  $info->kobi_xarisxi_meore_en;
+            $kobi_mineral_meore_ru =  $info->kobi_xarisxi_meore_ru;
+    
+            $kobi_mineral_mesame_ka =  $info->kobi_xarisxi_mesame_ka;
+            $kobi_mineral_mesame_ru =  $info->kobi_xarisxi_mesame_en;
+            $kobi_mineral_mesame_en =  $info->kobi_xarisxi_mesame_ru;
+    
+            $kobi_mineral_meotxe_ka =  $info->kobi_xarisxi_meotxe_ka;
+            $kobi_mineral_meotxe_en =  $info->kobi_xarisxi_meotxe_en;
+            $kobi_mineral_meotxe_ru =  $info->kobi_xarisxi_meotxe_ru;
+    
+    
+            $kobi_mineral_mexute_ka =  $info->kobi_xarisxi_mexute_ka;
+            $kobi_mineral_mexute_en =  $info->kobi_xarisxi_mexute_en;
+            $kobi_mineral_mexute_ru =  $info->kobi_xarisxi_mexute_ru;
+    
+            $kobi_mineral_image1 =  $info->kobi_xarisxi_image1;
+            $kobi_mineral_image2 =  $info->kobi_xarisxi_image2;
+            $kobi_mineral_image3 =  $info->kobi_xarisxi_image3;
+    
+            
+            return view('snoadmin/kobi/kobi_xarisxi_editor')->with(compact('kobi_mineral_image3', 'kobi_mineral_image2', 'kobi_mineral_image1', 'kobi_mineral_mexute_ru', 'kobi_mineral_mexute_en', 'kobi_mineral_mexute_ka', 'kobi_mineral_meotxe_ru', 'kobi_mineral_meotxe_en', 'kobi_mineral_meotxe_ka', 'kobi_mineral_mesame_en', 'kobi_mineral_mesame_ru', 'kobi_mineral_mesame_ka', 'kobi_mineral_meore_ru', 'kobi_mineral_meore_en', 'kobi_mineral_meore_ka', 'kobi_mineral_pirveli_ru', 'kobi_mineral_pirveli_en', 'kobi_mineral_pirveli_ka'));   
+    
+    
+        }
+    
+    
+        public function kobi_xarisxi_update(Request $request){
+            $info = Kobixarisxi::where('kobi_xarisxi_id', '=', '1')->first();
+    
+            $info->kobi_xarisxi_pirveli_ka=$request->kobi_mineral_pirveli_ka;
+            $info->kobi_xarisxi_pirveli_en=$request->kobi_mineral_pirveli_en;
+            $info->kobi_xarisxi_pirveli_ru=$request->kobi_mineral_pirveli_ru;
+    
+            $info->kobi_xarisxi_meore_ka=$request->kobi_mineral_meore_ka;
+            $info->kobi_xarisxi_meore_en=$request->kobi_mineral_meore_en;
+            $info->kobi_xarisxi_meore_ru=$request->kobi_mineral_meore_ru;
+    
+            $info->kobi_xarisxi_mesame_ka=$request->kobi_mineral_mesame_ka;
+            $info->kobi_xarisxi_mesame_ru=$request->kobi_mineral_mesame_ru;
+            $info->kobi_xarisxi_mesame_en=$request->kobi_mineral_mesame_en;
+    
+            $info->kobi_xarisxi_meotxe_ka=$request->kobi_mineral_meotxe_ka;
+            $info->kobi_xarisxi_meotxe_en=$request->kobi_mineral_meotxe_en;
+            $info->kobi_xarisxi_meotxe_ru=$request->kobi_mineral_meotxe_ru;
+    
+            $info->kobi_xarisxi_mexute_ka=$request->kobi_mineral_mexute_ka;
+            $info->kobi_xarisxi_mexute_en=$request->kobi_mineral_mexute_en;
+            $info->kobi_xarisxi_mexute_ru=$request->kobi_mineral_mexute_ru;
+    
+    
+            $info->save();
+            return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+    
+        }
+
+
+        public function kobi_xarisxi_update_image_one(Request $request){
+
+
+            $this->validate($request, [
+                'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+             ]);
+            
+             $randomi = time();
+            
+             $kobi_likage_update_image_one= $request->file('filesToUpload1');
+             $thumbnailImage = Image::make($kobi_likage_update_image_one);
+             $thumbnailPath = public_path().'/images/';
+             $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+             $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+            
+             $info = Kobixarisxi::where('kobi_xarisxi_id', '=', '1')->first();
+             $info->kobi_xarisxi_image1=$image_one;
+             $info->save();
+            return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+            
+            }
+            
+            
+            
+            public function kobi_xarisxi_update_image_two(Request $request){
+            
+            
+            $this->validate($request, [
+                'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+             ]);
+            
+             $randomi = time();
+            
+             $kobi_likage_update_image_one= $request->file('filesToUpload1');
+             $thumbnailImage = Image::make($kobi_likage_update_image_one);
+             $thumbnailPath = public_path().'/images/';
+             $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+             $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+            
+             $info = Kobixarisxi::where('kobi_xarisxi_id', '=', '1')->first();
+             $info->kobi_xarisxi_image2=$image_one;
+             $info->save();
+            return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+            
+            }
+            
+            
+            public function kobi_xarisxi_update_image_three(Request $request){
+            
+            
+            $this->validate($request, [
+                'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+             ]);
+            
+             $randomi = time();
+            
+             $kobi_likage_update_image_one= $request->file('filesToUpload1');
+             $thumbnailImage = Image::make($kobi_likage_update_image_one);
+             $thumbnailPath = public_path().'/images/';
+             $thumbnailImage->save($thumbnailPath.$randomi.$kobi_likage_update_image_one->getClientOriginalName());
+             $image_one = $randomi.$kobi_likage_update_image_one->getClientOriginalName();
+            
+             $info = Kobixarisxi::where('kobi_xarisxi_id', '=', '1')->first();
+             $info->kobi_xarisxi_image3=$image_one;
+             $info->save();
+             return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+            
+            }
 
 
     public function sno_likage(){
@@ -271,7 +674,6 @@ class AdminController extends Controller
         $sno_likage_image2 =  $info->sno_likage_image2;
         
         return view('snoadmin/likage_editor')->with(compact('sno_likage_image2','sno_likage_image1','sno_likage_text_pirveli_ka', 'sno_likage_text_pirveli_en', 'sno_likage_text_pirveli_ru', 'sno_likage_text_meore_ka', 'sno_likage_text_meore_en', 'sno_likage_text_meore_ru', 'sno_likage_text_mesame_ka', 'sno_likage_text_mesame_en', 'sno_likage_text_mesame_ru'));   
-
 
     }
 
@@ -624,13 +1026,95 @@ class AdminController extends Controller
     }
     
 
+    public function contact()
+    {
+        $contact = Contact::find(1);
+        return view('snoadmin/contact',compact('contact'));
+    }
+
+    public function contactUpdate(Request $request, $id)
+    {
+        $data = $this->validateRequest($request); //გადმოცემული პარამეტრების ვალიდაცია
+
+        $Contact = Contact::find($id);
+        $Contact->update($data);
+
+        return redirect()->back();
+    }    
 
 
+    public function validateRequest(Request $request) // ჩემს მიერ შექმნილი ფუნქცია
+    {
+        return $request->validate([
+            'contact_phone' => 'sometimes',
+            'contact_email' => 'sometimes',
+            'contact_address_ka' => 'sometimes',
+            'contact_address_en' => 'sometimes',
+            'contact_address_ru' => 'sometimes',
+            'contact_twitter' => 'sometimes',
+            'contact_facebook' => 'sometimes',
+            'contact_youtube' => 'sometimes'
+        ]);
+    }
+
+
+    public function company_header_image()
+    {
+        $root = request()->root();
+        $info = Company::get_company_data();
+        return view('snoadmin/company_header_image', compact('info'));
+    }
+
+    public function eqsport_header_image()
+    {
+        $root = request()->root();
+        $info = Eksporti::get_company_data();
+        return view('snoadmin/eqsport_header_image', compact('info'));
+    }
     
+    public function company_header_image_update(Request $request){
 
 
-    
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
 
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Company::where('company_id', '=', '1')->first();
+         $info->company_header_image=$image_one;
+         $info->save();
+        return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
+
+    public function eqsport_header_image_update(Request $request){
+
+
+        $this->validate($request, [
+            'filesToUpload1' => 'image|required|mimes:jpeg,png,jpg,gif,svg'
+         ]);
+
+         $randomi = time();
+
+         $sno_likage_update_image_one= $request->file('filesToUpload1');
+         $thumbnailImage = Image::make($sno_likage_update_image_one);
+         $thumbnailPath = public_path().'/images/';
+         $thumbnailImage->save($thumbnailPath.$randomi.$sno_likage_update_image_one->getClientOriginalName());
+         $image_one = $randomi.$sno_likage_update_image_one->getClientOriginalName();
+
+         $info = Eksporti::where('eksporti_id', '=', '1')->first();
+         $info->eksporti_header_image=$image_one;
+         $info->save();
+         return redirect()->back()->with('Success', 'წარმატებით დარედაქტირდა');
+
+    }
 
 
 }

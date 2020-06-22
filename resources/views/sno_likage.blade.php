@@ -3,31 +3,39 @@
 
 <section id="about-part" class="pt-80" style="background-color:#DCEFFC;">
     <div class="container">
-      
+
         <div class="row">
-        
-          
-            
-            
+
+
+
+
             <div class="col-lg-6">
                 <div class="about-content mt-30" style="padding-top:140px;">
                     <h3> წყლის წარმომავლობა</h3>
-<p>საქართველო ერთ-ერთი მდიდარი ქვეყანაა თავისი ჰიდროგეოლოგიური რესურსებით, როგორც რაოდენობრივი, ასევე ხარისხობრივი მაჩვენებლების მიხედვით და წარმოადგენს დროში განახლებად რესურს. ჰიდროგეოლოგიურ რესურსებში მოიაზრება მტკნარი მინერალური და თერმული წყლები. 
 
-</p>
-                   
+                    @if (app()->getLocale()=="ka")
+                    <p>{!! $Snolikage->sno_likage_text_pirveli_ka !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="en")
+                    <p>{!! $Snolikage->sno_likage_text_pirveli_en !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="ru")
+                    <p>{!! $Snolikage->sno_likage_text_pirveli_ru !!}</p>
+                    @endif
+    
+
                 </div>
             </div>
-            
-            
-            
-              <div class="col-lg-6" align="right">
+
+
+
+            <div class="col-lg-6" align="right">
                 <div class="mt-30">
-                    <img src="{{Request::root()}}/assets/img/warmomavloba/warmomavloba.png" class="responsive" alt="About">
+                    <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image1 }}" alt="Video">
                 </div>
-             </div>
-            
-            
+            </div>
+
+
         </div>
     </div>
 </section>
@@ -43,37 +51,37 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
 <section id="about-part">
-   
+
     <div class="row" style="background-color:#1592E6; margin-left:0px; margin-right:0px;">
-    
+
         <div class="col" align="right">
-         <img src="{{Request::root()}}/assets/img/warmomavloba/warmomavloba2.png" class="img-fluid" alt="About">
+            <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image2 }}" alt="Video">
         </div>
-        
-        
-        
+
+
+
         <div class="col" style="padding-top:110px; padding-left:120px;">
-                          
-        <h3>წყლის მდებარეობა</h3>
-        <p>
-        საქართველო ერთ-ერთი მდიდარი ქვეყანაა თავისი ჰიდროგეოლოგიური რესურსებით, 
-        როგორც რაოდენობრივი, ასევე ხარისხობრივი მაჩვენებლების მიხედვით და წარმოადგენს 
-        დროში განახლებად რესურს. ჰიდროგეოლოგიურ რესურსებში მოიაზრება მტკნარი მინერალური და თერმული წყლები. 
-        საქართველო ერთ-ერთი მდიდარი ქვეყანაა თავისი ჰიდროგეოლოგიური რესურსებით, 
-        როგორც რაოდენობრივი, ასევე ხარისხობრივი მაჩვენებლების მიხედვით და წარმოადგენს 
-        დროში განახლებად რესურს. ჰიდროგეოლოგიურ რესურსებში მოიაზრება მტკნარი მინერალური და თერმული წყლები. 
-        
-        </p>
-                          
+
+            <h3>წყლის მდებარეობა</h3>
+            @if (app()->getLocale()=="ka")
+            <p>{!! $Snolikage->sno_likage_text_meore_ka !!}</p>
+            @endif
+            @if (app()->getLocale()=="en")
+            <p>{!! $Snolikage->sno_likage_text_meore_en !!}</p>
+            @endif
+            @if (app()->getLocale()=="ru")
+            <p>{!! $Snolikage->sno_likage_text_meore_ru !!}</p>
+            @endif
+
         </div>
-                   
-        
-        </div>
+
+
+    </div>
 
 </section>
 <section id="products-part">
@@ -85,7 +93,7 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
@@ -94,18 +102,27 @@
 
 <section id="about-part" class="pt-60">
     <div class="container">
-      
+
         <div class="row">
 
-            
+
             <div class="col-lg-12">
                 <div class="about-content mt-30 text-center">
                     <h3>დაცული დაბინძურებისგან</h3>
-                    <p>წყლის მოპოვება 150 მეტრის სიღმიდან ხდება. წყლის რესურსი მიწის ზედაპირიდან  4 წყალგაუმტარი შრით არის იზოლირებული და ამის გამო  ის ნატურალურად არის დაცული ნებისმიერი სახის დაბინძურებისგან</p>
-                   
+                    @if (app()->getLocale()=="ka")
+                    <p>{!! $Snolikage->sno_likage_text_mesame_ka !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="en")
+                    <p>{!! $Snolikage->sno_likage_text_mesame_ru !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="ru")
+                    <p>{!! $Snolikage->sno_likage_text_mesame_en !!}</p>
+                    @endif
+        
+
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>

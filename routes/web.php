@@ -32,7 +32,7 @@ Route::get('/open_blog/{id}', 'BlogController@show_current_blog');
 
 Route::get('/snoadmin', function ()    {
     return view('snoadmin/main');
-});
+})->name('main_sno');
 
 
 
@@ -45,6 +45,8 @@ Route::post('/snoadmin/company_header', 'AdminController@company_header_update')
 
 
 Route::get('/snoadmin/company_header_image', 'AdminController@company_header_image')->name('company_header_image');
+Route::post('/snoadmin/company_header_image_update', 'AdminController@company_header_image_update')->name('company_header_image_update');
+
 
 Route::get('/snoadmin/company_sveti', 'AdminController@company_sveti')->name('company_sveti');
 Route::post('/snoadmin/company_sveti', 'AdminController@company_sveti_update')->name('update_company_sveti');
@@ -62,6 +64,8 @@ Route::post('/snoadmin/company_sawarmo', 'AdminController@company_sawarmo_update
 
 
 Route::get('/snoadmin/eqsport_header_image', 'AdminController@eqsport_header_image')->name('eqsport_header_image');
+Route::post('/snoadmin/eqsport_header_image_update', 'AdminController@eqsport_header_image_update')->name('eqsport_header_image_update');
+
 
 
 Route::get('/snoadmin/eqsport_sveti', 'AdminController@eqsport_sveti')->name('eqsport_sveti');
@@ -75,6 +79,10 @@ Route::get('/snoadmin/all_blog', 'AdminController@list_blog')->name('admin_blog_
 
 Route::get('/snoadmin/blog_drop/{id}', 'AdminController@drop_blog')->name('admin_blog_delete');
 
+Route::get('/snoadmin/blog_edit/{id}', 'AdminController@edit_blog')->name('edit_blog');
+
+Route::patch('/snoadmin/blog_edit/{id}', 'AdminController@edit_blog_update')->name('edit_blog_update');
+
 
 
 
@@ -84,6 +92,12 @@ Route::post('/snoadmin/sno_likage_update_image_one', 'AdminController@sno_likage
 Route::post('/snoadmin/sno_likage_update_image_two', 'AdminController@sno_likage_update_image_two')->name('sno_likage_update_image_two');
 
 
+Route::get('/snoadmin/kobi_likage', 'AdminController@kobi_likage')->name('kobi_likage');
+Route::post('/snoadmin/kobi_likage', 'AdminController@kobi_likage_update')->name('kobi_likage_update');
+Route::post('/snoadmin/kobi_likage_update_image_one', 'AdminController@kobi_likage_update_image_one')->name('kobi_likage_update_image_one');
+Route::post('/snoadmin/kobi_likage_update_image_two', 'AdminController@kobi_likage_update_image_two')->name('kobi_likage_update_image_two');
+
+
 
 
 
@@ -91,17 +105,26 @@ Route::get('/snoadmin/sno_mineral', 'AdminController@sno_mineral')->name('sno_mi
 Route::post('/snoadmin/sno_mineral', 'AdminController@sno_mineral_update')->name('sno_mineral_update');
 
 
+Route::get('/snoadmin/kobi_mineral', 'AdminController@kobi_mineral')->name('kobi_mineral');
+Route::post('/snoadmin/kobi_mineral', 'AdminController@kobi_mineral_update')->name('kobi_mineral_update');
+
+
 Route::post('/snoadmin/sno_mineral_update_image_one', 'AdminController@sno_mineral_update_image_one')->name('sno_mineral_update_image_one');
 Route::post('/snoadmin/sno_mineral_update_image_two', 'AdminController@sno_mineral_update_image_two')->name('sno_mineral_update_image_two');
 Route::post('/snoadmin/sno_mineral_update_image_three', 'AdminController@sno_mineral_update_image_three')->name('sno_mineral_update_image_three');
 
-
+Route::post('/snoadmin/kobi_mineral_update_image_one', 'AdminController@kobi_mineral_update_image_one')->name('kobi_mineral_update_image_one');
+Route::post('/snoadmin/kobi_mineral_update_image_two', 'AdminController@kobi_mineral_update_image_two')->name('kobi_mineral_update_image_two');
+Route::post('/snoadmin/kobi_mineral_update_image_three', 'AdminController@kobi_mineral_update_image_three')->name('kobi_mineral_update_image_three');
 
 
 
 
 Route::get('/snoadmin/sno_xarisxi', 'AdminController@sno_xarisxi')->name('sno_xarisxi');
 Route::post('/snoadmin/sno_xarisxi', 'AdminController@sno_xarisxi_update')->name('sno_xarisxi_update');
+
+Route::get('/snoadmin/kobi_xarisxi', 'AdminController@kobi_xarisxi')->name('kobi_xarisxi');
+Route::post('/snoadmin/kobi_xarisxi', 'AdminController@kobi_xarisxi_update')->name('kobi_xarisxi_update');
 
 
 Route::post('/snoadmin/sno_xarisxi_update_image_one', 'AdminController@sno_xarisxi_update_image_one')->name('sno_xarisxi_update_image_one');
@@ -110,6 +133,10 @@ Route::post('/snoadmin/sno_xarisxi_update_image_three', 'AdminController@sno_xar
 
 
 
+Route::post('/snoadmin/kobi_xarisxi_update_image_one', 'AdminController@kobi_xarisxi_update_image_one')->name('kobi_xarisxi_update_image_one');
+Route::post('/snoadmin/kobi_xarisxi_update_image_two', 'AdminController@kobi_xarisxi_update_image_two')->name('kobi_xarisxi_update_image_two');
+Route::post('/snoadmin/kobi_xarisxi_update_image_three', 'AdminController@kobi_xarisxi_update_image_three')->name('kobi_xarisxi_update_image_three');
 
 
-
+Route::get('/snoadmin/contact', 'AdminController@contact')->name('admin-contact');
+Route::patch('/snoadmin/contact/{id}', 'AdminController@contactUpdate')->name('admin-contact-update');

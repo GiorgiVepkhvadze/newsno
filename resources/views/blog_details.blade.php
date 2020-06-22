@@ -1,4 +1,7 @@
 @extends('layouts.main')
+
+@section('title', $Blog->blog_title_ka)
+
 @section('content')
 
 <section id="blog-details-part" class="pt-75">
@@ -16,11 +19,32 @@
                     <div class="blog-details-content">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h4>{!! $cBlog_row->$blog_title !!}</h4>
+                                @if (app()->getLocale()=="ka")
+                                <h4>{!! $cBlog_row->blog_title_ka !!}</h4>
+                                @endif
+                                @if (app()->getLocale()=="en")
+                                <h4>{!! $cBlog_row->blog_title_en !!}</h4>
+                                @endif
+                                @if (app()->getLocale()=="ru")
+                                <h4>{!! $cBlog_row->blog_title_ru !!}</h4>
+                                @endif
+
                             </div>
                         </div>
                      
-                        <p>{!! $cBlog_row->$blog_text !!}</p>
+                        
+
+                        @if (app()->getLocale()=="ka")
+                        <p>{!! $cBlog_row->blog_text_ka !!}</p>
+                        @endif
+                        @if (app()->getLocale()=="en")
+                        <p>{!! $cBlog_row->blog_text_en !!}</p>
+                        @endif
+                        @if (app()->getLocale()=="ru")
+                        <p>{!! $cBlog_row->blog_text_ru !!}</p>
+                        @endif
+
+                        
                     </div>
                     @endforeach
                

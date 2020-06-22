@@ -13,7 +13,7 @@
 
     
     <!--====== Title ======-->
-    <title>Fresh Vial - Drinking Mineral Water Delivery HTMl Template</title>
+    <title>@yield('title','Fresh Vial - Drinking Mineral Water Delivery HTMl Template')</title>
     
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
@@ -42,6 +42,12 @@
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+
+    <style>
+        .pwite p {
+            color: white;
+        }
+    </style>
   
 </head>
 <body>
@@ -204,9 +210,9 @@
                             <p>ყველა უფლება დაცულია, შპს აქუა გეო</p>
                             <div class="social-icons">
 							
-							<a href="#"><i class="icon ion-social-facebook"></i></a>
-							<a href="#"><i class="icon ion-social-twitter"></i></a>
-							<a href="#"><i class="icon ion-social-youtube"></i></a>
+							<a href="{{ $Contact->contact_facebook }}" target="_blank"><i class="icon ion-social-facebook"></i></a>
+							<a href="{{ $Contact->contact_twitter }}" target="_blank"><i class="icon ion-social-twitter"></i></a>
+							<a href="{{ $Contact->contact_youtube }}" target="_blank"><i class="icon ion-social-youtube"></i></a>
 							</div>
    
                         </div>

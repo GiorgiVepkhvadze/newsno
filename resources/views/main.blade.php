@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
+
 <section id="about-part" class="pt-80" style="background-color:#DCEFFC;">
     <div class="container">
       

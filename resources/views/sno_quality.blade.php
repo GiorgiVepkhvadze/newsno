@@ -3,24 +3,29 @@
 
 <section id="about-part" class="pt-60" style="background-color:#DCEFFC;">
     <div class="container">
-      
+
         <div class="row">
-        
-            
+
+
             <div class="col-lg-12">
                 <div class="about-content mt-30 text-center" style="padding-top:80px;">
                     <h3> წყლის წარმომავლობა</h3>
-<p>საქართველო ერთ-ერთი მდიდარი ქვეყანაა თავისი ჰიდროგეოლოგიური რესურსებით, როგორც რაოდენობრივი, ასევე ხარისხობრივი მაჩვენებლების მიხედვით და წარმოადგენს დროში განახლებად რესურს. ჰიდროგეოლოგიურ რესურსებში მოიაზრება მტკნარი მინერალური და თერმული წყლები. 
-
-</p>
-                   
+                    @if (app()->getLocale()=="ka")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_pirveli_ka !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="en")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_pirveli_en !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="ru")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_pirveli_ru !!}</p>
+                    @endif
                 </div>
             </div>
+
             
-            
-            
-            
-            
+
+
+
         </div>
     </div>
 </section>
@@ -36,33 +41,37 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
 <section id="about-part">
-   
+
     <div class="row" style="background-color:#1592E6; margin-left:0px; margin-right:0px;">
-    
+
         <div class="col" align="right">
-         <img src="{{Request::root()}}/assets/img/xarisxi/xarisxi.png" class="img-fluid" alt="About">
+            <img src="{{Request::root()}}/images/{{ $Snoxarisxi->sno_xarisxi_image1 }}" alt="Video">
         </div>
-        
-        
-        
-        <div class="col" style="padding-top:110px; padding-left:120px;">
-                          
-        <h3 style="color:#FFF;">სტანდარტები</h3>
-        <p style="color:#FFF;">
-            გარდა ამისა, წყლის დამუშავების დროს გამოყენებულია ისეთი ტექნოლოგიები, რომელიც არ იწვევს წყლის მიკრობიოლოგიურ და ქიმიურ შემადგენლობის ცვლილებას.
-             <br><br>
-            კომპანია “აქვა გეო” ეროვნული სტანდარტების სრული დაცვით აწარმოებს პროდუქციას. უახლესი ტექნოლოგიების გამოყენებით კომპანია წყალს უნარჩუნებს ყველა იმ მინერალს და სასარგებლო თვისებას, რაც ბუნებამ არგუნა. სნო-ს დებეტი 684 000 ლიტრია.
-        </p>
-                          
+
+
+
+        <div class="col pwite" style="padding-top:110px; padding-left:120px;">
+
+            <h3 style="color:#FFF;">სტანდარტები</h3>
+            @if (app()->getLocale()=="ka")
+            <p>{!! $Snoxarisxi->sno_xarisxi_meore_ka !!}</p>
+            @endif
+            @if (app()->getLocale()=="en")
+            <p>{!! $Snoxarisxi->sno_xarisxi_meore_en !!}</p>
+            @endif
+            @if (app()->getLocale()=="ru")
+            <p>{!! $Snoxarisxi->sno_xarisxi_meore_ru !!}</p>
+            @endif
+
         </div>
-                   
-        
-        </div>
+
+
+    </div>
 
 </section>
 <section id="products-part">
@@ -74,7 +83,7 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
@@ -86,37 +95,36 @@
                 <div class="about-content mt-40">
                     <h3> - სტანდარტები</h3>
                     <br><br>
-                    <p>
-                    
-                    
+                    @if (app()->getLocale()=="ka")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mesame_ka !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="en")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mesame_en !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="ru")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mesame_ru !!}</p>
+                    @endif
 
-მნიშვნელოვანია, რომ მოპოვებული ბუნებრივი წყალი მაღალი ხარისხით, სისუფთავით და ყველა სასარგებლო მინ Sno Glass production ერალის არსებობით ხასიათდება. საბადოდან მოპოვების შემდეგ წყალი გადის ფილტრაციის პროცესს, რომელიც კომპიუტერული კონტროლის უახლესი ტექნოლოგიური სისტემით მიმდინარეობს. ძალიან მნიშვნელოვანია ის ფაქტიც, რომ წყლის დამუშავების უბანზე არ ხდება მისი დაგროვება რეზერვუარებში. ჭაბურღილიდან მოპოვებული წყალი ფილტრაციის გავლით უწყვეტად მიეწოდება ჩამომსხმელ ხაზებს.
-<br><br>
-კვალიფიციური ტექნიკური პერსონალი, რომელმაც ტრეინინგი გაიარა ფრანგ და იტალიელ სპეციალისტებთან, უზრუნველყოფს წარმოების გამართულ და ეფექტურ მუშაობას.
-
-                    
-                    </p>
-                   
                 </div>
             </div>
-        
-        
-        
+
+
+
             <div class="col-lg-6" align="right">
-                
-                    <img src="{{Request::root()}}/assets/img/xarisxi/xarisxi2.png" alt="About">
-               
+
+                <img src="{{Request::root()}}/images/{{ $Snoxarisxi->sno_xarisxi_image2 }}" alt="Video">
+
             </div>
-            
-            
-            
+
+
+
         </div>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
     </div>
 </section>
 
@@ -131,7 +139,7 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
@@ -148,12 +156,15 @@
         <div class="col-lg-8">
             <div class="section-title text-center">
                 <h3 style="color:#000;">სტანდარტები</h3>
-                
-                <p style="color:#000;">კომპანია “აქვა გეო” 2009 წელს შეიქმნა. კომპანიის მესვეურებმა მიზნად დაისახეს ქართული უნიკალური წყლის პოპულარიზაცია, როგორც საქართველოში, ისე მის საზღვრებს გარეთ.
-                </p>
-                <p style="color:#000;">კომპანია “აქვა გეო” 2009 წელს შეიქმნა. კომპანიის მესვეურებმა მიზნად დაისახეს ქართული უნიკალური წყლის პოპულარიზაცია, როგორც საქართველოში, ისე მის საზღვრებს გარეთ.
-
-                </p>
+                @if (app()->getLocale()=="ka")
+                <p>{!! $Snoxarisxi->sno_xarisxi_meotxe_ka !!}</p>
+                @endif
+                @if (app()->getLocale()=="en")
+                <p>{!! $Snoxarisxi->sno_xarisxi_meotxe_en !!}</p>
+                @endif
+                @if (app()->getLocale()=="ru")
+                <p>{!! $Snoxarisxi->sno_xarisxi_meotxe_ru !!}</p>
+                @endif
             </div>
         </div>
     </div>
@@ -172,7 +183,7 @@
           width:100%;
           margin-left:0px;
           margin-right:0px;
-          background-repeat: no-repeat;"> 
+          background-repeat: no-repeat;">
     </div>
 </section>
 
@@ -187,43 +198,42 @@
 
 
             <div class="col-lg-6" align="left">
-                
-                <img src="{{Request::root()}}/assets/img/xarisxi/xarisxi3.png" alt="About">
-           
+
+                <img src="{{Request::root()}}/images/{{ $Snoxarisxi->sno_xarisxi_image3 }}" alt="Video">
+
             </div>
-        
+
 
 
             <div class="col-lg-6">
                 <div class="about-content mt-40">
                     <h3> - საწარმო</h3>
                     <br><br>
-                    <p>
-                    
-                    
+                    @if (app()->getLocale()=="ka")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mexute_ka !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="en")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mexute_en !!}</p>
+                    @endif
+                    @if (app()->getLocale()=="ru")
+                    <p>{!! $Snoxarisxi->sno_xarisxi_mexute_ru !!}</p>
+                    @endif
 
-მნიშვნელოვანია, რომ მოპოვებული ბუნებრივი წყალი მაღალი ხარისხით, სისუფთავით და ყველა სასარგებლო მინ Sno Glass production ერალის არსებობით ხასიათდება. საბადოდან მოპოვების შემდეგ წყალი გადის ფილტრაციის პროცესს, რომელიც კომპიუტერული კონტროლის უახლესი ტექნოლოგიური სისტემით მიმდინარეობს. ძალიან მნიშვნელოვანია ის ფაქტიც, რომ წყლის დამუშავების უბანზე არ ხდება მისი დაგროვება რეზერვუარებში. ჭაბურღილიდან მოპოვებული წყალი ფილტრაციის გავლით უწყვეტად მიეწოდება ჩამომსხმელ ხაზებს.
-<br><br>
-კვალიფიციური ტექნიკური პერსონალი, რომელმაც ტრეინინგი გაიარა ფრანგ და იტალიელ სპეციალისტებთან, უზრუნველყოფს წარმოების გამართულ და ეფექტურ მუშაობას.
-
-                    
-                    </p>
-                   
                 </div>
             </div>
-        
-        
-        
-         
-            
-            
+
+
+
+
+
+
         </div>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
     </div>
 </section>
 
