@@ -10,6 +10,7 @@ use App\Snomineral;
 use App\Snoxarisxi;
 
 use App\Kobilikage;
+use App\Blog;
 
 class ClientController extends Controller
 {
@@ -30,7 +31,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('main');
+        $BlogData = Blog::orderBy('blog_id','DESC')->limit('5')->get();
+        return view('main', compact('BlogData'));
     }
 
     public function about()

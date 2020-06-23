@@ -154,7 +154,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
 
             <div class="col-lg-5">
                 <div class="section-title text-right pb-15">
-                    <a href=''>ყველა სიახლის ნახვა <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href='{{ route('blog') }}'>ყველა სიახლის ნახვა <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     
                     
                    
@@ -166,56 +166,23 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
         </div>
         <div class="row">
             <div class="blog-slied owl-carousel">
-                <div class="col-lg-12">
-                    <div class="singel-blog mt-30">
-                        <div class="blog-thum">
-                            <img src="{{Request::root()}}/assets/images/blog/b-1.jpg" alt="Blog">
-                            <div class="date text-center">
-                                <h3>22</h3>
-                                <span>Sep 2020</span>
-                            </div>
-                        </div>
-                        <div class="blog-cont pt-25 text-center">
-                            <a href="#"><h5>Etiam sit amet justo tincidunt.</h5></a>
-                            <p>Nullam condimentum varius ipsum at viverra. Donec tortor metus, sollicitudin vitae est id, ullamcorper pretium tortor. Phasellus.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-blog mt-30">
-                        <div class="blog-thum">
-                            <img src="{{Request::root()}}/assets/images/blog/b-2.jpg" alt="Blog">
-                            <div class="date text-center">
-                                <h3>22</h3>
-                                <span>Sep 2020</span>
-                            </div>
-                        </div>
-                        <div class="blog-cont pt-25 text-center">
-                            <a href="#"><h5>Etiam sit amet justo tincidunt.</h5></a>
-                            <p>Nullam condimentum varius ipsum at viverra. Donec tortor metus, sollicitudin vitae est id, ullamcorper pretium tortor. Phasellus.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
 
-                
+                @foreach ($BlogData as $item)
                 <div class="col-lg-12">
                     <div class="singel-blog mt-30">
                         <div class="blog-thum">
-                            <img src="{{Request::root()}}/assets/images/blog/b-1.jpg" alt="Blog">
-                            <div class="date text-center">
-                                <h3>22</h3>
-                                <span>Sep 2020</span>
-                            </div>
+                            <img src="{{Request::root()}}/images/{{ $item->blog_main_pic }}" alt="Blog">
                         </div>
                         <div class="blog-cont pt-25 text-center">
-                            <a href="#"><h5>Etiam sit amet justo tincidunt.</h5></a>
-                            <p>Nullam condimentum varius ipsum at viverra. Donec tortor metus, sollicitudin vitae est id, ullamcorper pretium tortor. Phasellus.</p>
-                            <a href="#">Read More</a>
+                            <a href="open_blog/{{ $item->blog_id }}/"><h5>{{ $item->blog_time }}</h5></a>
+                            <p>{!! str_limit( $item->blog_text, 120) !!}</p>
+                            <a href="open_blog/{{ $item->blog_id }}/">{{ __('main.READ_MORE') }}</a>
                         </div>
                     </div>
                 </div>
+                @endforeach
+
+
            
             </div>
         </div>

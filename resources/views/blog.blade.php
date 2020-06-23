@@ -36,7 +36,7 @@
                         </div>
                         <div class="blog-cont pt-25">
                             <a href="open_blog/{{ $Blogdata_row->blog_id }}/"><h5>{!! $Blogdata_row->$blog_title !!}</h5></a>
-                            <p> {!! str_limit( $Blogdata_row->$blog_text, 120) !!} </p>
+                            <p> {!! str_limit( $Blogdata_row->blog_text, 120) !!} </p>
                             <a href="open_blog/{{ $Blogdata_row->blog_id }}/">{{ __('main.READ_MORE') }}</a>
                         </div>
                     </div>
