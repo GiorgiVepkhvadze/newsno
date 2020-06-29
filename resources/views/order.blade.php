@@ -221,7 +221,10 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             <div class="row" style="padding:20px;">
                             <div class="col-md-2">
 
-                              შეკვეთა
+                                <div class="singel-form">
+                                    <span type="submit" onclick="alert('a');">შეკვეთა</span>
+                                </div>
+                              
 
                             </div>
                             </div>

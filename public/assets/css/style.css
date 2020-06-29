@@ -3341,7 +3341,7 @@ p {
 .blog-details .comment-form .singel-form label{
     display: block;
     width: 100%;
-    font-size: 14px;
+    font-size: 24px;
     color: #2c2d3e;
 }
 .contact-form .singel-form input,
@@ -3362,18 +3362,40 @@ p {
     padding-top: 15px;
 }
 .contact-form .singel-form button{
-    padding: 0 30px;
-    line-height: 45px;
-    background-color: #1592e6;
-    color: #fff;
+    padding: 0 70px;
+    line-height: 60px;
+    background-image: url('http://localhost:8000/assets/img/submit_button.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    color: #000;
     border: 0;
     font-family: 'BPG Banner ExtraSquare Caps', sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
+   
     cursor: pointer;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
+
+.contact-form .singel-form span{
+    padding: 0 70px;
+    line-height: 60px;
+    background-image: url('http://localhost:8000/assets/img/submit_button.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    color: #000;
+    border: 0;
+    font-family: 'BPG Banner ExtraSquare Caps', sans-serif;
+    font-weight: 700;
+   
+    cursor: pointer;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+
+
+
 .contact-form .singel-form button:hover{
     background-color: #2c2d3e;
 }

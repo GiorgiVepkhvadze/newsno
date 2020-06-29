@@ -52,7 +52,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                             </div>
                             <div class="col-md-12">
                                 <div class="singel-form form-group">
-                                    <label>შეტყობინება :</label>
+                                    <label>&nbsp; შეტყობინება :</label>
                                     <textarea name="message" placeholder="| მიუთითეთ შეტყობინება" required="required"></textarea>
                                    
                                 </div>
@@ -60,9 +60,11 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                             <p class="form-message"></p>
                             <div class="col-md-12">
                                 <div class="singel-form">
-                                    <button type="submit">გაგზავნა</button>
+                                    <span type="submit" onclick="alert('a');">გაგზავნა</span>
                                 </div>
                             </div>
+
+                            
                         </div>
                     </form>
                 </div>
