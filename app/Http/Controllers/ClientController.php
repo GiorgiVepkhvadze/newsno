@@ -102,6 +102,16 @@ class ClientController extends Controller
         return view('sno_product');
     }
     
+
+
+    public function kobi_product()
+    {
+
+
+
+        return view('kobi_product');
+    }
+    
     
     
     

@@ -93,7 +93,7 @@
                                         <a class="active" href="{{Request::root()}}/kobi_likage">{{ __('main.KOBI') }}</a>
                                         <ul class="sub-menu">
                                             <li class="li"><a href="{{Request::root()}}/kobi_likage">{{ __('main.WATER_LINKAGE') }}</a></li>
-                                            <li class="li"><a href="{{Request::root()}}/product_m/2">{{ __('main.PRODUCTION') }}</a></li>
+                                            <li class="li"><a href="{{Request::root()}}/kobi_product">{{ __('main.PRODUCTION') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_mineral">{{ __('main.MINERAL') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_quality">{{ __('main.WATER_QUALITY') }}</a></li>
                                             
