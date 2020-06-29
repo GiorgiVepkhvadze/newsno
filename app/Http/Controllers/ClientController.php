@@ -94,6 +94,13 @@ class ClientController extends Controller
     
 
 
+    public function sno_product()
+    {
+
+
+
+        return view('sno_product');
+    }
     
     
     

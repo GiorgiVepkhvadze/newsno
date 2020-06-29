@@ -81,7 +81,7 @@
                                         <a class="active" href="{{Request::root()}}/sno_likage">{{ __('main.SNO') }}</a>
                                         <ul class="sub-menu">
                                             <li class="li"><a href="{{Request::root()}}/sno_likage">{{ __('main.WATER_LINKAGE') }}</a></li>
-                                            <li class="li"><a href="{{Request::root()}}/product_m/1">{{ __('main.PRODUCTION') }}</a></li>
+                                            <li class="li"><a href="{{Request::root()}}/sno_product">{{ __('main.PRODUCTION') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/sno_mineral">{{ __('main.MINERAL') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/sno_quality">{{ __('main.WATER_QUALITY') }}</a></li>
                                             

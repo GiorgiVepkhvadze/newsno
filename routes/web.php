@@ -28,6 +28,10 @@ Route::get('/contact', 'ClientController@contact')->name('contact');
 Route::get('/order', 'ClientController@order')->name('order');
 Route::get('/blog', 'BlogController@all')->name('blog');
 Route::get('/open_blog/{id}', 'BlogController@show_current_blog');
+Route::get('/sno_product', 'ClientController@sno_product')->name('sno_product');
+
+
+
 
 
 Route::get('/snoadmin', function ()    {
