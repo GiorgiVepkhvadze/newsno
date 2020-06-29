@@ -374,7 +374,7 @@ p {
 
 .navbar .navbar-nav .nav-item a.active,
 .navbar .navbar-nav .nav-item:hover > a{
-    color: #1592e6;
+    color: #000;
 }
 
 .navbar .navbar-nav .nav-item ul.sub-menu {

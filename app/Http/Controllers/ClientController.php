@@ -84,6 +84,13 @@ class ClientController extends Controller
     }
 
 
+    public function order()
+    {
+
+
+
+        return view('order');
+    }
     
 
 
