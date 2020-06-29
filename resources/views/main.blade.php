@@ -4,24 +4,15 @@
 
 <section id="about-part" class="pt-80" style="background-color:#DCEFFC;">
     <div class="container">
-      
         <div class="row">
-        
-          
-            
-            
+           
             <div class="col-lg-6">
                 <div class="about-content mt-30" style="padding-top:140px;">
                     <h3> წყალი არის სნო</h3>
-                    <p>წყლის მოპოვება 150 მეტრის სიღმიდან ხდება. წყლის რესურსი მიწის ზედაპირიდან  4 წყალგაუმტარი შრით არის იზოლირებული და ამის გამო  ის ნატურალურად არის დაცული ნებისმიერი სახის დაბინძურებისგან
-
-</p>
+                    <p>წყლის მოპოვება 150 მეტრის სიღმიდან ხდება. წყლის რესურსი მიწის ზედაპირიდან  4 წყალგაუმტარი შრით არის იზოლირებული და ამის გამო  ის ნატურალურად არის დაცული ნებისმიერი სახის დაბინძურებისგან</p>
                    
                 </div>
             </div>
-            
-            
-            
               <div class="col-lg-6" align="right">
                 <div class="mt-30">
                     <img src="{{Request::root()}}/assets/img/main_photo.PNG" class="responsive" alt="About">
@@ -53,6 +44,7 @@
 </section>
 
 
+
 <section id="products-part" style="background: rgb(234,244,251);
 background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rgba(255,255,255,1) 100%);">
     <div class="container">
@@ -74,7 +66,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="#">სნო</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/sno_likage">სნო</a></h6>
                     </div>
                 </div>
             </div>
@@ -98,7 +90,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="#">კობი</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/kobi_likage">კობი</a></h6>
                     </div>
                 </div>
             </div>
@@ -121,7 +113,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             </div>
             
             
-            <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;">
+            <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;" align="center">
                 <div class="about-content mt-30">
                     <h3>ჩვენ ვქმნით სნოს.</h3>
                     <p>Proin fringilla vulputate lorem quis congue. Mauris lacinia gravida ultr
@@ -129,6 +121,8 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
                     trices laoreet iaculis sed lum non dolor fermentum, consequat risus non, auc
                     tor nisi. Nunc sodales blandit lum auctor nibh varius metus volutpat, et s
                     ollicitudin massa ornare. .</p>
+
+                    <a href="">გაიგე მეტი</a>
                    
                 </div>
             </div>
