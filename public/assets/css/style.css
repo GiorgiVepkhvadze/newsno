@@ -3353,6 +3353,7 @@ p {
     padding-left: 15px;
     font-size: 14px;
     color: #2c2d3e;
+    background-color: transparent;
 }
 
 .contact-form .singel-form textarea{
