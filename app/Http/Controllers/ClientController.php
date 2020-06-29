@@ -8,6 +8,10 @@ use App\Eksporti;
 use App\Snolikage;
 use App\Snomineral;
 use App\Snoxarisxi;
+use App\Sno_product_area;
+use App\Sno_products;
+use App\Kobi_product_area;
+use App\Kobi_products;
 
 use App\Kobilikage;
 use App\Blog;
@@ -98,8 +102,10 @@ class ClientController extends Controller
     {
 
 
+      $product_list = Sno_products::get_sno_products();
+      $header_area = Sno_product_area::get_sno_product_area();
+      return view('sno_product', compact('header_area', 'product_list'));
 
-        return view('sno_product');
     }
     
 
@@ -107,11 +113,29 @@ class ClientController extends Controller
     public function kobi_product()
     {
 
+        $product_list = Kobi_products::get_kobi_products();
+        $kobi_product_area = Kobi_product_area::get_kobi_product_area();
+        return view('kobi_product', compact('kobi_product_area', 'product_list'));
 
-
-        return view('kobi_product');
     }
     
+    
+    public function kobi_mineral()
+    {
+
+        $Snomineral = Snomineral::find(1);
+        return view('kobi_mineral', compact('Snomineral'));
+
+       
+    }
+
+
+
+
+
+    
+
+
     
     
     

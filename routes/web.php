@@ -30,8 +30,7 @@ Route::get('/blog', 'BlogController@all')->name('blog');
 Route::get('/open_blog/{id}', 'BlogController@show_current_blog');
 Route::get('/sno_product', 'ClientController@sno_product')->name('sno_product');
 Route::get('/kobi_product', 'ClientController@kobi_product')->name('kobi_product');
-
-
+Route::get('/kobi_mineral', 'ClientController@kobi_mineral')->name('kobi_mineral');
 
 
 

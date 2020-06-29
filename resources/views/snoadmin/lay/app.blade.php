@@ -103,16 +103,42 @@
                         <a href="#sno" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>სნო</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="sno" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="{{Request::root()}}/snoadmin/sno_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/sno_mineral"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/sno_xarisxi"><i class="ri-toggle-fill"></i>წყლის ხარისხი</a></li>
+                        </ul>
+                     </li>
+
+
+
+                     <li>
+                        <a href="#sno_product" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>სნო პროდუქცია</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sno_product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="{{Request::root()}}/snoadmin/sno_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/sno_mineral"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/sno_xarisxi"><i class="ri-toggle-fill"></i>წყლის ხარისხი</a></li>
                         </ul>
                      </li>
 
+
+
+
+
                      
                      <li>
                         <a href="#kobi" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>კობი</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="kobi" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="{{Request::root()}}/snoadmin/kobi_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/kobi_mineral"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>
+                           <li><a href="{{Request::root()}}/snoadmin/kobi_xarisxi"><i class="ri-toggle-fill"></i>წყლის ხარისხი</a></li>
+                        </ul>
+                     </li>
+
+
+                     <li>
+                        <a href="#kobi_product" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-device-fill"></i><span>კობი პროდუქცია</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="kobi_product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="{{Request::root()}}/snoadmin/kobi_likage"><i class="ri-device-fill"></i>წყლის წარმომავლობა</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/"><i class="ri-toggle-fill"></i>პროდუქცია</a></li>
                            <li><a href="{{Request::root()}}/snoadmin/kobi_mineral"><i class="ri-toggle-fill"></i>მინერალიზაცია და <br> ინგრედიენტები</a></li>

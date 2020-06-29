@@ -11,9 +11,17 @@
 	<link rel="stylesheet" href="{{asset('assets/fonts/ionicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/Social-Icons.css')}}">
 
-    
-    <!--====== Title ======-->
-    <title>@yield('title','Fresh Vial - Drinking Mineral Water Delivery HTMl Template')</title>
+        <title>AQUA GEO | GEORGIAN WATER</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="Index, Follow" />
+        <meta name="author" content="Digital Design" />
+        <meta property="og:title" content="AQUA GEO | GEORGIAN WATER" />
+
+
+   
     
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
