@@ -64,18 +64,20 @@
         </div>
 
 
+<style>
+ 
+    </style>
+        <div class="col" style="padding-top:110px; padding-left:120px; color:#fff;">
 
-        <div class="col" style="padding-top:110px; padding-left:120px;">
-
-            <h3>წყლის მდებარეობა</h3>
+            <h3 style="color: #FFF;">-წყლის მდებარეობა</h3>
             @if (app()->getLocale()=="ka")
-            <p>{!! $Snolikage->sno_likage_text_meore_ka !!}</p>
+            <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ka) !!}</p>
             @endif
             @if (app()->getLocale()=="en")
-            <p>{!! $Snolikage->sno_likage_text_meore_en !!}</p>
+            <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_en) !!}</p>
             @endif
             @if (app()->getLocale()=="ru")
-            <p>{!! $Snolikage->sno_likage_text_meore_ru !!}</p>
+            <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ru) !!}</p>
             @endif
 
         </div>

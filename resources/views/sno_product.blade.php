@@ -90,7 +90,7 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
                         <br><br>
-                        <p>არომატიზირებული წყალი</p>
+                        <p style="font-size:22px;">არომატიზირებული წყალი</p>
                         <br><br>
                     </div>
                 </div>

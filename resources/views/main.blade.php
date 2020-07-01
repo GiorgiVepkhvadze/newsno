@@ -115,12 +115,10 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             
             <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;" align="center">
                 <div class="about-content mt-30">
+                    <br><br><br><br>
                     <h3>ჩვენ ვქმნით სნოს.</h3>
-                    <p>Proin fringilla vulputate lorem quis congue. Mauris lacinia gravida ultr
-                    ices. Phasellus consectetur pellentesque. Vestibulum eu ligula cursus nisi ul
-                    trices laoreet iaculis sed lum non dolor fermentum, consequat risus non, auc
-                    tor nisi. Nunc sodales blandit lum auctor nibh varius metus volutpat, et s
-                    ollicitudin massa ornare. .</p>
+                    <p>კომპანიაში ყოველი თანამშრომელი თავისი კომპეტენციისა და პიროვნული თვისებების მიხედვით შეირჩა. საწარმოს პერსონალმა გაიარა სასწავლო კურსი ფრანგი და იტალიელი სპეციალისტების ხელმძღვანელობით.
+                    </p>
 
                     <a href="">გაიგე მეტი</a>
                    
