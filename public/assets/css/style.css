@@ -43,14 +43,14 @@
 ===========================*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto Sans:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto Sans Georgian SemCond:400,500,600,700');
 @import url("//cdn.web-fonts.ge/fonts/bpg-banner-extrasquare-caps/css/bpg-banner-extrasquare-caps.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-ingiri-arial/css/bpg-ingiri-arial.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-mrgvlovani/css/bpg-mrgvlovani.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 body {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 
 img {
@@ -82,8 +82,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 700;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	color: #1592e6;
 	margin: 0px;
 }
@@ -368,8 +367,7 @@ p {
 .navbar .navbar-nav .nav-item a {
 	font-size: 16px;
 	color: #2c2d3e;
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 700;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	-webkit-transition: all 0.4s linear;
 	transition: all 0.4s linear;
 	padding: 19px 0;
@@ -713,7 +711,7 @@ p {
     border-radius: 50px;
     font-size: 18px;
     font-weight: 700;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     line-height: 60px;
     border: 4px solid #bfc9ea;
     color: #fff;
@@ -798,7 +796,7 @@ p {
     border-radius: 50px;
     font-size: 18px;
     font-weight: 700;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     line-height: 60px;
     border: 4px solid #bfc9ea;
     color: #1592e6;
@@ -942,7 +940,7 @@ p {
     background-color: #1592e6;
     padding: 5px 10px;
     border-radius: 50%;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
 }
 
@@ -977,14 +975,14 @@ p {
     color: #1592e6;
     font-weight: 700;
     margin-right: 10px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 .singel-products .products-contant .price-rating .price .discount-price{
     font-size: 16px;
     color: #5a6a9f;
     position: relative;
     font-weight: 500;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 
 .singel-products .products-contant .price-rating .price .discount-price::before{
@@ -1046,7 +1044,7 @@ p {
 .trusted-clients-logo h5{
     text-transform: uppercase;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     padding-bottom: 8px;
 }
@@ -1072,7 +1070,7 @@ p {
 }
 .trusted-clients-discription ul li .button{
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     color: #1592e6;
     border: 2px solid #1592e6;
@@ -1091,7 +1089,7 @@ p {
 .trusted-clients-discription ul li .video{
     font-size: 16px;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
 }
 .trusted-clients-discription ul li .video img{
@@ -1250,7 +1248,7 @@ p {
     font-size: 16px;
     font-weight: 400;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 
 .singel-client .client-text{
@@ -1358,7 +1356,7 @@ p {
     padding-bottom: 17px;
 }
 .singel-blog .blog-cont a{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: #1592e6;
@@ -1423,7 +1421,7 @@ p {
     padding: 0 40px;
     font-size: 18px;
     font-weight: 700;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     color: #1592e6;
     background-color: #fff;
     line-height: 58px;
@@ -1493,7 +1491,7 @@ p {
     border-radius: 50px;
     border: 0;
     font-weight: 700;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 22px;
     color: #fff;
     text-transform: uppercase;
@@ -1518,7 +1516,7 @@ p {
 }
 
 .footer-title h5 {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	font-weight: 700;
 	position: relative;
 	padding-bottom: 7px;
@@ -1538,7 +1536,7 @@ p {
 
 .footer-info ul li a{
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     line-height: 36px;
     color: #2c2d3e;
 }
@@ -1550,7 +1548,7 @@ p {
     margin-top: 15px;
 }
 .footer-news ul li .f-news .news-title a{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: #2c2d3e;
@@ -1719,7 +1717,7 @@ p {
     border: 0;
     color: #5a6a9f;
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 400;
 }
 
@@ -1790,7 +1788,7 @@ p {
 }
 .singel-pricing h3 span{
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 400;
 }
 
@@ -1798,13 +1796,13 @@ p {
     font-size: 14px;
     color: #2c2d3e;
     font-weight: 400;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     line-height: 30px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
 .singel-pricing a{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 600;
     font-size: 14px;
     line-height: 34px;
@@ -1917,7 +1915,7 @@ p {
 }
 
 .faq-page-content .card .card-header  h5 a span{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     font-size: 18px;
     position: relative;
@@ -1975,7 +1973,7 @@ p {
 }
 .singel-team .team-content{}
 .singel-team .team-content h6{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 600;
     padding-top: 17px;
     padding-bottom: 3px;
@@ -2023,7 +2021,7 @@ p {
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 
 .login-form .singel-form > p{
@@ -2054,7 +2052,7 @@ p {
 }
 
 .login-form .singel-form button{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 45px;
@@ -2081,7 +2079,7 @@ p {
 
 .login-form .singel-form ul.remember li > label {
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     color: #2c2d3e;
     cursor: pointer;
 }
@@ -2121,7 +2119,7 @@ p {
 
 .login-form .singel-form ul.remember li > p{
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 
 .login-form .singel-form ul.remember li > p a{
@@ -2181,7 +2179,7 @@ p {
 
 .blog-details .share{}
 .blog-details .share ul li.head{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 14px;
     color: #1592e6;
     font-weight: 700;
@@ -2255,7 +2253,7 @@ p {
 .blog-details .comment .singel-comment .cont > h6{
     font-size: 15px;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     padding-bottom: 12px;
 }
@@ -2306,7 +2304,7 @@ p {
     background-color: #1592e6;
     color: #fff;
     border: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
@@ -2468,7 +2466,7 @@ p {
 
 .products-details .title h3 {
 	font-size: 30px;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	color: #2c2d3e;
 }
 .products-details .rating {
@@ -2493,7 +2491,7 @@ p {
 .products-details .review p:first-child{
     font-size: 14px;
     color: #1592e6;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     margin-right: 30px;
 }
@@ -2502,7 +2500,7 @@ p {
     border-top: 1px solid #e7e9f4;
 }
 .products-details .share ul li.head{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 14px;
     color: #1592e6;
     font-weight: 700;
@@ -2576,7 +2574,7 @@ p {
 	border: 1px solid #e8e8e8;
 	border-left: 0;
 	border-right: 0;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	font-size: 14px;
 }
 .products-details .quanty-availability .quanty .qty .nice-number button{
@@ -2607,7 +2605,7 @@ p {
 }
 .products-details .quanty-availability .availability p{
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
@@ -2626,7 +2624,7 @@ p {
     font-size: 14px;
     color: #fff;
     border-radius: 5px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
@@ -2651,7 +2649,7 @@ p {
     padding: 0px 20px;
     line-height: 45px;
     background-color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: #fff;
@@ -2671,7 +2669,7 @@ p {
     padding-bottom: 20px;
 }
 .Product-tab .tab-content .tab-pane .Product-tab-cont > h6{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: #2c2d3e;
@@ -2684,7 +2682,7 @@ p {
     position: relative;
     font-size: 15px;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 .Product-tab .tab-content .tab-pane .Product-tab-cont > ul  li::before {
 	content: '';
@@ -2730,7 +2728,7 @@ p {
 .Product-tab-cont .comment .singel-comment .cont > h6{
     font-size: 15px;
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     padding-bottom: 12px;
 }
@@ -2781,7 +2779,7 @@ p {
 }
 .Product-tab-cont .singel-review .review-thum .review-cont h6{
     color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 .Product-tab-cont .singel-review .review-thum .review-cont span{
     font-size: 14px;
@@ -2795,7 +2793,7 @@ p {
 .Product-tab-cont .singel-review .date > span{
     font-size: 14px;
     font-weight: 700;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
 }
 .Product-tab-cont .singel-review .review-cont p{
     padding-top: 10px;
@@ -2826,7 +2824,7 @@ p {
 .Product-tab-cont .singel-review .review-cont .rating > span{
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     margin-left: 10px;
 }
 
@@ -2890,7 +2888,7 @@ p {
     line-height: 45px;
     color: #fff;
     background-color: #2c2d3e;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     border: 0;
@@ -2971,7 +2969,7 @@ p {
 	text-align: left;
 }
 .cart-table .product-description h6 {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	font-size: 16px;
 	padding-bottom: 10px;
 }
@@ -2997,7 +2995,7 @@ p {
 	border: 1px solid #e8e8e8;
 	border-left: 0;
 	border-right: 0;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans Georgian SemCond', sans-serif;
 	font-size: 14px;
 }
 .product-quantite .qty .nice-number button{
@@ -3041,7 +3039,7 @@ p {
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 400;
 }
 .cart-btn .btn-left a:hover,
@@ -3059,7 +3057,7 @@ p {
 .estemate-shipping h5,
 .disconut-code h5{
     font-size: 16px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 600;
     color: #2c2d3e;
     padding-bottom: 20px;
@@ -3076,7 +3074,7 @@ p {
 .estemate-shipping .form-box label,
 .disconut-code .form-box label{
     display: block;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 14px;
     color: #2c2d3e;
 }
@@ -3111,7 +3109,7 @@ p {
 .disconut-code .form-box button{
     padding: 0 20px;
     line-height: 40px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -3133,7 +3131,7 @@ p {
 .cart-total a{
     padding: 0 50px;
     line-height: 60px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -3163,7 +3161,7 @@ p {
     line-height: 60px;
     color: #2c2d3e;
     font-weight: 600;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     text-transform: uppercase;
 }
 
@@ -3195,7 +3193,7 @@ p {
 .checkout-box .card-info .form-box label{
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     color: #2c2d3e;
     margin-right: 16px;
     display: block;
@@ -3217,7 +3215,7 @@ p {
 }
 .checkout-box .details .details-title h6{
     font-size: 16px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 600;
     border-bottom: 1px solid #e6e9f1;
     padding-bottom: 8px;
@@ -3236,7 +3234,7 @@ p {
 
 .checkout-box .details .order-total h5{
     font-size: 15px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 600;
     color: #2c2d3e;
     padding-top: 18px;
@@ -3288,7 +3286,7 @@ p {
 
 .order-btn {}
 .order-btn a{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-size: 22px;
     font-weight: 700;
     color: #fff;
@@ -3372,7 +3370,7 @@ p {
     background-position: left;
     color: #000;
     border: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
    
     cursor: pointer;
@@ -3388,7 +3386,7 @@ p {
     background-position: left;
     color: #000;
     border: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Georgian SemCond', sans-serif;
     font-weight: 700;
    
     cursor: pointer;

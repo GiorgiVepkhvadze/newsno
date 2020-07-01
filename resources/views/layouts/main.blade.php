@@ -44,7 +44,9 @@
     
     <!--====== Default css ======-->
     <link rel="stylesheet" href="{{asset('assets/css/default.css')}}">
-    
+    <link rel="stylesheet" href="{{asset('assets/css/stylesheet.css')}}">
+
+
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     

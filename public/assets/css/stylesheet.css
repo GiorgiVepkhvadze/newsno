@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Noto Sans Georgian Cond ExtBd';
+    src: url('NotoSansGeorgian-CondensedExtraBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond SemBd';
+    src: url('NotoSansGeorgian-CondensedSemiBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Blk';
+    src: url('NotoSansGeorgian-Black.woff2') format('woff2'),
+        url('NotoSansGeorgian-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond';
+    src: url('NotoSansGeorgian-ExtraCondensedThin.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemCond';
+    src: url('NotoSansGeorgian-SemiCondensedBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-SemiCondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond';
+    src: url('NotoSansGeorgian-CondensedThin.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond ExtLt';
+    src: url('NotoSansGeorgian-CondensedExtraLight.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond';
+    src: url('NotoSansGeorgian-ExtraCondensedBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian';
+    src: url('NotoSansGeorgian-Bold.woff2') format('woff2'),
+        url('NotoSansGeorgian-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond Med';
+    src: url('NotoSansGeorgian-CondensedMedium.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond';
+    src: url('NotoSansGeorgian-CondensedLight.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond Blk';
+    src: url('NotoSansGeorgian-ExtraCondensedBlack.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond ExtLt';
+    src: url('NotoSansGeorgian-ExtraCondensedExtraLight.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond';
+    src: url('NotoSansGeorgian-ExtraCondensedLight.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemCond ExtBd';
+    src: url('NotoSansGeorgian-SemiCondensedExtraBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-SemiCondensedExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemBd';
+    src: url('NotoSansGeorgian-SemiBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemCond Blk';
+    src: url('NotoSansGeorgian-SemiCondensedBlack.woff2') format('woff2'),
+        url('NotoSansGeorgian-SemiCondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond SemBd';
+    src: url('NotoSansGeorgian-ExtraCondensedSemiBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond ExtBd';
+    src: url('NotoSansGeorgian-ExtraCondensedExtraBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemCond';
+    src: url('NotoSansGeorgian-SemiCondensed.woff2') format('woff2'),
+        url('NotoSansGeorgian-SemiCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Med';
+    src: url('NotoSansGeorgian-Medium.woff2') format('woff2'),
+        url('NotoSansGeorgian-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtLt';
+    src: url('NotoSansGeorgian-ExtraLight.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtBd';
+    src: url('NotoSansGeorgian-ExtraBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond Blk';
+    src: url('NotoSansGeorgian-CondensedBlack.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond';
+    src: url('NotoSansGeorgian-ExtraCondensed.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond';
+    src: url('NotoSansGeorgian-CondensedBold.woff2') format('woff2'),
+        url('NotoSansGeorgian-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian Cond';
+    src: url('NotoSansGeorgian-Condensed.woff2') format('woff2'),
+        url('NotoSansGeorgian-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian';
+    src: url('NotoSansGeorgian-Light.woff2') format('woff2'),
+        url('NotoSansGeorgian-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian ExtCond Med';
+    src: url('NotoSansGeorgian-ExtraCondensedMedium.woff2') format('woff2'),
+        url('NotoSansGeorgian-ExtraCondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian';
+    src: url('NotoSansGeorgian-Regular.woff2') format('woff2'),
+        url('NotoSansGeorgian-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
