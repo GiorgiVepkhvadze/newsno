@@ -6,9 +6,9 @@
 
         <div class="row">
 
-            <div class="col-lg-3"> </div>
+            <div class="col-lg-2"> </div>
 
-            <div class="col-lg-6"> 
+            <div class="col-lg-8"> 
 
                 <div class="about-content mt-30 text-center" style="padding-top:80px;">
                     <h3> წყლის წარმომავლობა</h3>
@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3"> </div>
+            <div class="col-lg-2"> </div>
         </div>
     </div>
 </section>
@@ -205,7 +205,7 @@
 
 
             <div class="col-lg-6">
-                <div class="about-content mt-40">
+                <div class="about-content mt-10">
                     <h3> <img src="{{Request::root()}}/images/lurji_line.png"> საწარმო</h3>
                     @if (app()->getLocale()=="ka")
                     <p>{!! $Snoxarisxi->sno_xarisxi_mexute_ka !!}</p>
@@ -216,8 +216,6 @@
                     @if (app()->getLocale()=="ru")
                     <p>{!! $Snoxarisxi->sno_xarisxi_mexute_ru !!}</p>
                     @endif
-
-
                     <a href="{{Request::root()}}/pdf/ISO 9001.pdf" target="blank" class="haccp_sno"></a> &nbsp;
                     <a href="{{Request::root()}}/pdf/ISO 22000.pdf" target="blank" class="iso_sno"></a>
 

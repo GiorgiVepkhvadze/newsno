@@ -102,7 +102,7 @@
                                     <li class="nav-item">
                                         <a class="active" href="{{Request::root()}}/kobi_likage">{{ __('main.KOBI') }}</a>
                                         <ul class="sub-menu">
-                                            <li class="li"><a href="{{Request::root()}}/kobi_likage">{{ __('main.WATER_LINKAGE') }}</a></li>
+                                            <li class="li"><a href="{{Request::root()}}/kobi_likage">{{ __('main.KOBI_WATER_LINKAGE') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_product">{{ __('main.PRODUCTION') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_mineral">{{ __('main.MINERAL') }}</a></li>
                                            
@@ -222,12 +222,13 @@
                         <div class="footer-about pt-30">
                             <a href="#"><img src="{{Request::root()}}/assets/img/footer_logo.png" alt="logo"></a>
                             <p style="font-size: 12px;">ყველა უფლება დაცულია, შპს აქვა გეო</p>
-                            <div class="social-icons">
-							
-							<a href="{{ $Contact->contact_facebook }}" target="_blank"><i class="icon ion-social-facebook"></i></a>
-							<a href="{{ $Contact->contact_twitter }}" target="_blank"><i class="icon ion-social-twitter"></i></a>
-							<a href="{{ $Contact->contact_youtube }}" target="_blank"><i class="icon ion-social-youtube"></i></a>
-							</div>
+                            
+                            <p>info@aquageo.ge<br>
+                                +995 592 003 937<br>
+                                +995 322 470 410<br>
+                            </p>
+                            
+                         
    
                         </div>
                     </div>
@@ -272,6 +273,13 @@
                                 <li><a href="#">წყლის ხარისხი</a></li>
                                 
                             </ul>
+
+                            <div class="social-icons">
+							
+                                <a href="{{ $Contact->contact_facebook }}" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                                <a href="{{ $Contact->contact_twitter }}" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                                <a href="{{ $Contact->contact_youtube }}" target="_blank"><i class="icon ion-social-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
 					
@@ -287,6 +295,13 @@
                                 <li><a href="#">მინერალიაცია და შემადგენლობა</a></li>
                                 
                             </ul>
+
+                            <div class="social-icons">
+							
+                                <a href="{{ $Contact->contact_facebook }}" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                                <a href="{{ $Contact->contact_twitter }}" target="_blank"><i class="icon ion-social-instagram"></i></a>
+                                <a href="{{ $Contact->contact_youtube }}" target="_blank"><i class="icon ion-social-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
 					

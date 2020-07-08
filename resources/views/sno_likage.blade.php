@@ -58,18 +58,16 @@
 <section id="about-part">
 
     <div class="row" style="background-color:#1592E6; margin-left:0px; margin-right:0px;">
-        <div class="col" align="right">
+        
+        <div class="col-lg-1">
+        </div>
+        
+        <div class="col-lg-5" align="right" style="padding-right:8%;">
             <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image2 }}" alt="Video">
-            <br><br><br><br>
         </div>
 
-
-<style>
- 
-    </style>
-        <div class="col" style="padding-top:110px; padding-left:120px; color:#fff;">
-
-            <h3 style="color: #FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3>
+        <div class="col-lg-5" style="padding-top:110px; padding-left:120px; color:#fff;">
+            <h3 style="color: #FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3><br>
             @if (app()->getLocale()=="ka")
             <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ka) !!}</p>
             @endif
@@ -79,8 +77,11 @@
             @if (app()->getLocale()=="ru")
             <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ru) !!}</p>
             @endif
-
         </div>
+
+        <div class="col-lg-1">
+        </div>
+
 
 
     </div>
@@ -91,7 +92,7 @@
           background-image:url('{{Request::root()}}/assets/img/Subtraction 2.svg'); 
           background-size: 100%; 
           background-position: top;
-          height:160px;
+          height:140px;
           width:100%;
           margin-left:0px;
           margin-right:0px;
@@ -102,7 +103,7 @@
 
 
 
-<section id="about-part" class="pt-60">
+<section id="about-part" class="pt-10">
     <div class="container">
 
         <div class="row">

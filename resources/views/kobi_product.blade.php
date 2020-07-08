@@ -25,7 +25,7 @@
             <div class="col-lg-8">
                 <div class="section-title text-center pb-15">
                     <br><br>
-                    <p>კობის პროდუქცია</p>
+                    <h3 style="color:#78AA66;">კობის პროდუქცია</h3>
                 </div>
             </div>
         </div>

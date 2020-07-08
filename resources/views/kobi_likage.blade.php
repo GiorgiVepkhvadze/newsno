@@ -14,7 +14,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
                 <div class="about-content mt-30" style="padding-top:100px;">
                     <h3 style="color:#78AA66;"> წყლის წარმომავლობა
                         და ხარისხი</h3>
-                        <br><br>
 
                         @if (app()->getLocale()=="ka")
                         <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_pirveli_ka !!}</p>
@@ -32,7 +31,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
 
             <div class="col-lg-6" align="right">
-                <div class="mt-30">
+                <div class="mt-60">
                     <img src="{{Request::root()}}/images/{{ $Kobilikage->kobi_likage_image1 }}" alt="Video">
 
                 </div>
@@ -69,8 +68,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
         </div>
         <div class="col-lg-5" style="padding-top:80px;">
             
-            <h3 style="color:#FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3>
-            <br><br>
+            <h3 style="color:#FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3> <br>
             @if (app()->getLocale()=="ka")
             <p style="color:#fff;">{!! strip_tags($Kobilikage->kobi_likage_text_meore_ka) !!}</p>
             @endif
@@ -92,7 +90,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
           background-image:url('{{Request::root()}}/assets/img/kobi_likage_footer.svg'); 
           background-size: 100%; 
           background-position: top;
-          height:160px;
+          height:140px;
           width:100%;
           margin-left:0px;
           margin-right:0px;
@@ -110,9 +108,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
 
             <div class="col-lg-12">
-                <div class="about-content mt-30 text-center">
+                <div class="about-content mt-10 text-center" style="padding-bottom: 30px;">
                     <h3 style="color:#78AA66;">წყლის ტექნოლოგია</h3>
-
                     @if (app()->getLocale()=="ka")
                     <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_mesame_ka !!}</p>
                     @endif

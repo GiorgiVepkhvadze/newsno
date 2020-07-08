@@ -6,14 +6,17 @@
     <div class="container">
         <div class="row">
            
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="about-content mt-30" style="padding-top:140px;">
-                    <h3> წყალი არის სნო</h3>
+                    <h2> წყალი არის სნო</h2> <br>
                     <p>წყლის მოპოვება 150 მეტრის სიღმიდან ხდება. წყლის რესურსი მიწის ზედაპირიდან  4 წყალგაუმტარი შრით არის იზოლირებული და ამის გამო  ის ნატურალურად არის დაცული ნებისმიერი სახის დაბინძურებისგან</p>
                    
                 </div>
             </div>
-              <div class="col-lg-6" align="right" style="padding-top:70px;">
+
+
+            
+              <div class="col-lg-7" align="right" style="padding-top:70px;">
                 <div class="mt-30">
                     <img src="{{Request::root()}}/assets/img/main_photo.PNG" class="responsive" alt="About">
                 </div>
@@ -51,7 +54,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-15 pt-80">
-                    <h2>ჩვენი პროდუქცია</h2>
+                    <h2>ჩვენი პროდუქცია</h2><br>
                     <p>ჩვენ ვქმნით პროდუქტს, რომელიც ყოველ ნაბიჯზე ცვლის შენი 
                         ცხოვრების სტილსა და ხარისხს </p>
 
@@ -116,7 +119,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;" align="center">
                 <div class="about-content mt-30">
                     <br><br><br><br>
-                    <h3>ჩვენ ვქმნით სნოს</h3>
+                    <h2>ჩვენ ვქმნით სნოს</h2> <br>
                     <p>კომპანიაში ყოველი თანამშრომელი თავისი <br>
                          კომპეტენციისა და პიროვნული თვისებების <br>
                           მიხედვით შეირჩა. საწარმოს პერსონალმა გაიარა <br>

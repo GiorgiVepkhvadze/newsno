@@ -42,9 +42,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
 <section id="about-part" class="pt-10">
     <div class="container">
-        <div class="row mt-60">
+        <div class="row mt-10">
             <div class="col-lg-6">
-                <div class="about-content mt-40">
+                <div class="about-content mt-70">
                     <h3 style="color:#000;"> ოქროს საბადო</h3>
                     <br>
                     <p>

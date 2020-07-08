@@ -104,14 +104,6 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
                         <img src="{{Request::root()}}/assets/img/products/snolimoni.png" alt="Products">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center pb-1">
                         <br><br>
                         <p>სნო ლიმონით 0.5 
                             პეტ ბოთლი</p>
@@ -142,6 +134,9 @@
         </div>
     </div>
 </section>
+
+
+
 
 
 

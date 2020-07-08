@@ -193,16 +193,20 @@
 
     </div>
 
-    <div class="row" style="background-color:#2d3e50; margin-left:0px; margin-right:0px;">
+    <div class="row" style="background-color:#2d3e50; margin-left:0px; margin-right:0px; padding-bottom: 60px;">
         <div class="col" align="right">
             <img src="{{Request::root()}}/images/{{ $Snomineral->sno_mineral_image3 }}" alt="Video" style="margin-right: 18%;">
         </div>
         <div class="col align-middle" align="left"><br><br><br>
             <img src="{{Request::root()}}/images/cxrili.PNG" alt="Video">
         </div>
+       
     </div>
+   
 
 </section>
+
+
 
 
 

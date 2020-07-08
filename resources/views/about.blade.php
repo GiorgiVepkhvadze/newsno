@@ -94,10 +94,10 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
             <div class="col-lg-12" style="background-color:#e9f9ff;">
                
                 <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-1">
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-10">
 
                     <div class="about-content mt-30 text-center">
                         <h3> მიზანი</h3>
@@ -124,7 +124,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                 </div>
 
 
-                <div class="col-lg-3">
+                <div class="col-lg-1">
                 </div>
             </div>
                 
@@ -162,11 +162,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
 
             <div class="col-lg-6">
-                <div class="about-content mt-30">
-
-                    <p>
-
-
+                <div class="about-content mt-10">
                         @if (app()->getLocale()=="ka")
                             <p>{!! $Company->company_sawarmo_piveli_ka !!}</p>
                         @endif
@@ -176,11 +172,6 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                         @if (app()->getLocale()=="ru")
                             <p>{!! $Company->company_sawarmo_piveli_ru !!}</p>
                         @endif
-
-
-
-
-
                     </p>
 
                 </div>
