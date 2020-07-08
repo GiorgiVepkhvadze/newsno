@@ -354,6 +354,16 @@ p {
         transform: translateY(0%)
     }
 }
+.world_icon{
+
+    background-image: url(../../images/world.png);
+    background-repeat: no-repeat;
+    width:16px;
+    height:16px;
+    background-position: bottom;
+    
+
+}
 
 .navbar {
     padding: 0;
@@ -361,7 +371,7 @@ p {
 }
 .navbar .navbar-nav{}
 .navbar .navbar-nav .nav-item{
-    margin: 0 20px;
+    margin: 0 30px;
     position: relative;
 }
 .navbar .navbar-nav .nav-item a {
@@ -960,9 +970,9 @@ p {
     margin: 0;
 }
 .singel-products .products-contant .products-title a{
-    font-size: 16px;
+    font-size: 25px;
     color: #1592e6;
-    font-weight: 700;
+    
 }
 
 .singel-products .products-contant .price-rating {
@@ -1357,9 +1367,50 @@ p {
 }
 .singel-blog .blog-cont a{
     font-family: 'Noto Sans Georgian SemCond', sans-serif;
-    font-weight: 700;
+    
     font-size: 14px;
     color: #1592e6;
+}
+
+.white_line{
+
+  
+
+}
+
+.productsSno {
+    position:relative;
+}
+
+.owl-prev, .owl-next {
+position:absolute;
+}
+
+.owl-prev {
+left:0;
+top: 120px;
+width: 50px;
+height: 50px;
+background: white!important;
+border-radius: 50%;
+margin-left: 15px;
+
+}
+
+.owl-next {
+right:0;
+top:120px;
+width: 50px;
+height: 50px;
+background: white!important;
+border-radius: 50%;
+margin-right: 15px;
+
+}
+
+.owl-nav
+{
+display: inherit!important;
 }
 
 .blog-slied .owl-dots{
@@ -1402,6 +1453,46 @@ p {
 	background-size: contain;
     z-index: 9;
 }
+
+
+.haccp_sno{
+    width: 107px;
+    height: 54px;
+    background-image: url(../images/Haccp_sno.png);
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.iso_sno {
+    width: 107px;
+    height: 54px;
+    background-image: url(../images/iso_sno.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.haccp_kobi{
+    width: 107px;
+    height: 54px;
+    background-image: url(../images/kobi_haccp.png);
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.iso_kobi {
+    width: 107px;
+    height: 54px;
+    background-image: url(../images/kobi_iso.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
 .delivery-text{
     position: relative;
     z-index: 99;
@@ -3349,8 +3440,10 @@ p {
 .contact-form .singel-form textarea{
     width: 100%;
     height: 40px;
-    border: 1px solid #e6e9f1;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-left: none;
+    border-top:none;
     padding-left: 15px;
     font-size: 14px;
     color: #2c2d3e;
@@ -3358,7 +3451,6 @@ p {
 }
 
 .contact-form .singel-form textarea{
-    height: 200px;
     resize: none;
     padding-top: 15px;
 }
@@ -3387,7 +3479,7 @@ p {
     color: #000;
     border: 0;
     font-family: 'Noto Sans Georgian SemCond', sans-serif;
-    font-weight: 700;
+   
    
     cursor: pointer;
     -webkit-transition: all 0.4s linear;

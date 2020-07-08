@@ -36,7 +36,12 @@ class ClientController extends Controller
     public function index()
     {
         $BlogData = Blog::orderBy('blog_id','DESC')->limit('5')->get();
-        return view('main', compact('BlogData'));
+        $lang = app()->getLocale();
+        $blog_text = "blog_text_".$lang;
+        $blog_title = "blog_title_".$lang;
+
+
+        return view('main', compact('BlogData', 'lang', 'blog_text', 'blog_title'));
     }
 
     public function about()

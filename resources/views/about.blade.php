@@ -6,6 +6,8 @@
 background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 100%);">
     <div class="container">
         <div class="row justify-content-center">
+            <div class="col-lg-2">
+            </div>
             <div class="col-lg-8">
                 <div class="section-title text-center">
                     <h2>კომპანიის ისტორია</h2>
@@ -23,6 +25,9 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
                 </div>
             </div>
+            <div class="col-lg-2">
+            </div>
+        
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -87,28 +92,42 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
 
             <div class="col-lg-12" style="background-color:#e9f9ff;">
-                <div class="about-content mt-30 text-center">
-                    <h3> მიზანი</h3>
-                    <p>
+               
+                <div class="row">
+                <div class="col-lg-3">
+                </div>
 
-                        @if (app()->getLocale()=="ka")
-                            <p>{!! $Company->company_mizani_ka !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="en")
-                            <p>{!! $Company->company_mizani_en !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="ru")
-                            <p>{!! $Company->company_mizani_ru !!}</p>
-                        @endif
+                <div class="col-lg-6">
 
+                    <div class="about-content mt-30 text-center">
+                        <h3> მიზანი</h3>
 
-
-
-
-
-                    </p>
+    
+                            @if (app()->getLocale()=="ka")
+                                <p>{!! $Company->company_mizani_ka !!}</p>
+                            @endif
+                            @if (app()->getLocale()=="en")
+                                <p>{!! $Company->company_mizani_en !!}</p>
+                            @endif
+                            @if (app()->getLocale()=="ru")
+                                <p>{!! $Company->company_mizani_ru !!}</p>
+                            @endif
+    
+    
+    
+    
+    
+    
+    
+                    </div>
 
                 </div>
+
+
+                <div class="col-lg-3">
+                </div>
+            </div>
+                
             </div>
 
         </div>

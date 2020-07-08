@@ -71,7 +71,7 @@
                         <nav class="navbar navbar-expand-lg">
                            
                             <a class="navbar-brand" href="{{Request::root()}}">
-                                <img src="{{Request::root()}}/assets/img/logo.png" alt="აქვა გეო">
+                                <img src="{{Request::root()}}/assets/img/logo.png" width="200" alt="აქვა გეო">
                             </a> <!-- Logo -->
                             
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,8 +105,7 @@
                                             <li class="li"><a href="{{Request::root()}}/kobi_likage">{{ __('main.WATER_LINKAGE') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_product">{{ __('main.PRODUCTION') }}</a></li>
                                             <li class="li"><a href="{{Request::root()}}/kobi_mineral">{{ __('main.MINERAL') }}</a></li>
-                                            <li class="li"><a href="{{Request::root()}}/kobi_quality">{{ __('main.WATER_QUALITY') }}</a></li>
-                                            
+                                           
                                         </ul>
                                     </li>
                                     
@@ -139,7 +138,12 @@
 
                                 @if (app()->getLocale()=="ka")
                                 <ul>
-                                    <li><i class="fa fa-globe"></i> <a id="search" href="#">GEO <i class="fa fa-angle-down"></i></a>
+                                    <li>
+                                        
+                                        <i class="world_icon"></i> 
+                                        
+                                        
+                                        <a id="search" href="#">GEO <i class="fa fa-angle-down"></i></a>
                                         <div class="search-box">
                                             <a href="{{Request::root()}}/lang/en">ENG</a><br>
                                             <a href="{{Request::root()}}/lang/ru">RUS</a><br>
@@ -208,7 +212,7 @@
 
     <!--====== FOOTER PART START ======-->
     
-    <footer id="footer-part" class="pt-65">
+    <footer id="footer-part" class="pt-20">
         <div class="container ">
         
             
@@ -217,7 +221,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-about pt-30">
                             <a href="#"><img src="{{Request::root()}}/assets/img/footer_logo.png" alt="logo"></a>
-                            <p>ყველა უფლება დაცულია, შპს აქუა გეო</p>
+                            <p style="font-size: 12px;">ყველა უფლება დაცულია, შპს აქვა გეო</p>
                             <div class="social-icons">
 							
 							<a href="{{ $Contact->contact_facebook }}" target="_blank"><i class="icon ion-social-facebook"></i></a>
@@ -241,7 +245,7 @@
 					
                     <div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="footer-title pt-30">
-                            <h5>კომპანია</h5>
+                            <p style="color:#000; font-size: 21px; font-weight: 300;">კომპანია</p>
                         </div>
                         <div class="footer-info">
                             <ul>
@@ -249,6 +253,7 @@
                                 <li><a href="#">მიზანი</a></li>
                                 <li><a href="#">წარმოება</a></li>
                                 <li><a href="#">ექსპორტი</a></li>
+                                <li><a href="#">შეკვეთა</a></li>
                                 <li><a href="#">ბლოგი</a></li>
                                 <li><a href="#">კონტაქტი</a></li>
                             </ul>
@@ -257,7 +262,7 @@
 					
 					<div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="footer-title pt-30">
-                            <h5>სნო</h5>
+                            <p style="color:#000; font-size: 21px; font-weight: 300;">სნო</p>
                         </div>
                         <div class="footer-info">
                             <ul>
@@ -273,14 +278,14 @@
 					
 					<div class="col-lg-2 col-md-3 col-sm-6">
                         <div class="footer-title pt-30">
-                            <h5>კობი</h5>
+                            <p style="color:#000; font-size: 21px; font-weight: 300;">კობი</p>
                         </div>
                         <div class="footer-info">
                             <ul>
                                 <li><a href="#">წყლის წარმომოავლობა</a></li>
                                 <li><a href="#">პროდუქცია</a></li>
                                 <li><a href="#">მინერალიაცია და შემადგენლობა</a></li>
-                                <li><a href="#">წყლის ხარისხი</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -299,9 +304,6 @@
    
     <!--====== BACK TO TOP PART START ======-->
     
-    <a href="#" class="back-to-top">
-        <img src="{{Request::root()}}/assets/images/back-to-top.png" alt="Icon">
-    </a>
 
 <!--====== jquery js ======-->
     <script src="{{asset('assets/js/vendor/modernizr-3.6.0.min.js')}}"></script>

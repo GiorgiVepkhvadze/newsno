@@ -247,10 +247,11 @@ $(function() {
     
     $(".products-slied").owlCarousel({
         loop:true,
-        nav:false,
+        nav:true,
         dots:false,
         autoplay:true,
         smartSpeed:800,
+        navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
         responsive:{
             0:{
                 items:1,

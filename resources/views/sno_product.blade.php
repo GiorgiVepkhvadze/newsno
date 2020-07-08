@@ -19,18 +19,21 @@
     
 
 <section id="products-part" class="pt-0 white-bg">
-    <div class="container" style="background: rgb(220,236,247);
-    background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 100%);">
+    <div class="container" style="background: rgb(220,239,252);
+    background: linear-gradient(180deg, rgba(220,239,252,1) 0%, rgba(255,255,255,1) 100%);">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-15">
                     <br><br>
-                    <p>სნო</p>
+                    <p style="color:#00B0F2; font-size:24px;">სნო</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="products-slied owl-carousel">
+
+
+
+            <div class="products-slied productsSno owl-carousel">
 
 
                 @foreach ($product_list as $product_list_item)
@@ -90,7 +93,7 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
                         <br><br>
-                        <p style="font-size:22px;">არომატიზირებული წყალი</p>
+                        <p style="font-size:26px;">არომატიზირებული წყალი</p>
                         <br><br>
                     </div>
                 </div>

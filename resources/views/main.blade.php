@@ -13,7 +13,7 @@
                    
                 </div>
             </div>
-              <div class="col-lg-6" align="right">
+              <div class="col-lg-6" align="right" style="padding-top:70px;">
                 <div class="mt-30">
                     <img src="{{Request::root()}}/assets/img/main_photo.PNG" class="responsive" alt="About">
                 </div>
@@ -62,11 +62,11 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <img src="{{Request::root()}}/assets/img/products/main_one.PNG" alt="Products">
+                        <a href="{{Request::root()}}/sno_product" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_one.PNG" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="{{Request::root()}}/sno_likage">სნო</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/sno_product" style="color:#000;">სნო</a></h6>
                     </div>
                 </div>
             </div>
@@ -74,11 +74,11 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <img src="{{Request::root()}}/assets/img/products/main_two.png" alt="Products">
+                        <a href="{{Request::root()}}/sno_limoni" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_two.png" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="{{Request::root()}}/sno_limoni">სნო ლიმონის</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/sno_limoni" style="color:#000;">სნო ლიმონის</a></h6>
                     </div>
                 </div>
             </div>
@@ -86,11 +86,11 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <img src="{{Request::root()}}/assets/img/products/main_three.png" alt="Products">
+                        <a href="{{Request::root()}}/kobi_product" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_three.png" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
-                        <h6 class="products-title"><a href="{{Request::root()}}/kobi_likage">კობი</a></h6>
+                        <h6 class="products-title"><a href="{{Request::root()}}/kobi_product" style="color:#000;">კობი</a></h6>
                     </div>
                 </div>
             </div>
@@ -116,11 +116,15 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;" align="center">
                 <div class="about-content mt-30">
                     <br><br><br><br>
-                    <h3>ჩვენ ვქმნით სნოს.</h3>
-                    <p>კომპანიაში ყოველი თანამშრომელი თავისი კომპეტენციისა და პიროვნული თვისებების მიხედვით შეირჩა. საწარმოს პერსონალმა გაიარა სასწავლო კურსი ფრანგი და იტალიელი სპეციალისტების ხელმძღვანელობით.
+                    <h3>ჩვენ ვქმნით სნოს</h3>
+                    <p>კომპანიაში ყოველი თანამშრომელი თავისი <br>
+                         კომპეტენციისა და პიროვნული თვისებების <br>
+                          მიხედვით შეირჩა. საწარმოს პერსონალმა გაიარა <br>
+                           სასწავლო კურსი ფრანგი და იტალიელი <br>
+                            სპეციალისტების ხელმძღვანელობით.
                     </p>
 
-                    <a href="">გაიგე მეტი</a>
+                    <a href="" style="color:#00B0F2;"><u>გაიგე მეტი</u></a>
                    
                 </div>
             </div>
@@ -146,7 +150,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
 
             <div class="col-lg-5">
                 <div class="section-title text-right pb-15">
-                    <a href='{{ route('blog') }}'>ყველა სიახლის ნახვა <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href='{{ route('blog') }}' style="color:#00B0F2;">ყველას ნახვა <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     
                     
                    
@@ -166,9 +170,9 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
                             <img src="{{Request::root()}}/images/{{ $item->blog_main_pic }}" alt="Blog">
                         </div>
                         <div class="blog-cont pt-25 text-center">
-                            <a href="open_blog/{{ $item->blog_id }}/"><h5>{{ $item->blog_time }}</h5></a>
-                            <p>{!! str_limit( $item->blog_text, 120) !!}</p>
-                            <a href="open_blog/{{ $item->blog_id }}/">{{ __('main.READ_MORE') }}</a>
+                            <a href="open_blog/{{ $item->blog_id }}/"><h5 style="color:#000;">{{ $item->$blog_title }}</h5></a>
+                            <br>
+                            <a href="open_blog/{{ $item->blog_id }}/" style="color:#00B0F2;"><u>{{ __('main.READ_MORE') }}</u></a>
                         </div>
                     </div>
                 </div>

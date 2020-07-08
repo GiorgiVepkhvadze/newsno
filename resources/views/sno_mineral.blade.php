@@ -11,8 +11,14 @@
 
             <div class="col-lg-12">
                 <div class="about-content mt-30 text-center" style="padding-top:80px; padding-bottom:40px;">
-                    <h3> მინერილიზაცია და შემადგენლობა</h3>
-                    @if (app()->getLocale()=="ka")
+                    <h3> მინერალიზაცია და შემადგენლობა</h3>
+
+                <div class="row">
+                        <div class="col-lg-3"> </div>
+                        <div class="col-lg-6"> 
+
+
+                            @if (app()->getLocale()=="ka")
                     <p>{!! $Snomineral->sno_mineral_pirveli_ka !!}</p>
                     @endif
                     @if (app()->getLocale()=="en")
@@ -22,7 +28,18 @@
                     <p>{!! $Snomineral->sno_mineral_pirveli_ru !!}</p>
                     @endif
 
+                        </div>
+                        <div class="col-lg-3"> </div>  
+
+
+                                  
+
+                    
+
                 </div>
+
+
+
             </div>
 
 
@@ -52,15 +69,20 @@
 
     <div class="row" style="background-color:#CAEAF2; margin-left:0px; margin-right:0px;">
 
+       
+
+
         <div class="col" align="right">
-            <img src="{{Request::root()}}/images/{{ $Snomineral->sno_mineral_image1 }}" alt="Video">
+            <img src="{{Request::root()}}/images/{{ $Snomineral->sno_mineral_image1 }}" alt="Video" style="margin-right: 7%;">
+            <br><br><br>
         </div>
 
 
 
-        <div class="col" style="padding-top:110px; padding-left:120px;">
+        <div class="col" style="padding-top:20px; padding-left:120px;">
 
-            <h3>სტანდარტები</h3>
+            <h3><img src="{{Request::root()}}/images/lurji_line.png"> სტანდარტები</h3>
+            <br><br>
             @if (app()->getLocale()=="ka")
             <p>{!! $Snomineral->sno_mineral_meore_ka !!}</p>
             @endif
@@ -82,7 +104,7 @@
           background-image:url('{{Request::root()}}/assets/img/mineralizacia_bottom.svg'); 
           background-size: 100%; 
           background-position: top;
-          height:160px;
+          height:140px;
           width:100%;
           margin-left:0px;
           margin-right:0px;
@@ -97,14 +119,10 @@
 
 <section id="about-part" class="pt-10">
     <div class="container">
-        <div class="row mt-60">
+        <div class="row">
             <div class="col-lg-6">
                 <div class="about-content mt-40">
-                    <h3> - სტანდარტები</h3>
-                    <br><br>
-                    <p>
-
-
+                    <h3><img src="{{Request::root()}}/images/lurji_line.png"> სტანდარტები</h3>
                         @if (app()->getLocale()=="ka")
                         <p>{!! $Snomineral->sno_mineral_mesame_ka !!}</p>
                         @endif
@@ -114,9 +132,8 @@
                         @if (app()->getLocale()=="ru")
                         <p>{!! $Snomineral->sno_mineral_mesame_en !!}</p>
                         @endif
-
-                    </p>
-
+ <br><br>
+                   
                 </div>
             </div>
 
@@ -158,10 +175,8 @@
 <section id="about-part">
 
     <div class="row" style="background-color:#2d3e50; margin-left:0px; margin-right:0px;">
-
-
         <div class="col-lg-12">
-            <div class="about-content mt-30 text-center pwite" style="padding-top:80px; padding-bottom:40px;">
+            <div class="about-content mt-30 text-center pwite" style="padding-bottom:10px;">
 
                     @if (app()->getLocale()=="ka")
                     <p style="color:#fff;">{!! $Snomineral->sno_mineral_meotxe_ka !!}</p>
@@ -176,36 +191,15 @@
             </div>
         </div>
 
-
-
-
-
     </div>
 
     <div class="row" style="background-color:#2d3e50; margin-left:0px; margin-right:0px;">
-
         <div class="col" align="right">
-            <img src="{{Request::root()}}/images/{{ $Snomineral->sno_mineral_image3 }}" alt="Video">
+            <img src="{{Request::root()}}/images/{{ $Snomineral->sno_mineral_image3 }}" alt="Video" style="margin-right: 18%;">
         </div>
-
-
-
-        <div class="col pwite" style="padding-top:110px; padding-left:120px;">
-
-            <h3>სტანდარტები</h3>
-            @if (app()->getLocale()=="ka")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_ka !!}</p>
-            @endif
-            @if (app()->getLocale()=="en")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_en !!}</p>
-            @endif
-            @if (app()->getLocale()=="ru")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_ru !!}</p>
-            @endif
-
+        <div class="col align-middle" align="left"><br><br><br>
+            <img src="{{Request::root()}}/images/cxrili.PNG" alt="Video">
         </div>
-
-
     </div>
 
 </section>

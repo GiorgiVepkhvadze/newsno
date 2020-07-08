@@ -72,18 +72,18 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             
                             
                             <div class="row" style="padding:20px;">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="checkbox" class="custom-control-input" id="customRadio1" name="example1">
                                         <label class="custom-control-label" for="customRadio1">დისპენსერების რაოდენობა</label>
                                       
                                     </div>
                                  </div> 
-                                 <div class="col-md-3">
+                                 <div class="col-md-4">
                                        <span style="padding-left:20px;">
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-plus"></i></button>
-                                        <span> 4 </span>
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="minus_dispanser_number();"><i class="fa fa-minus"></i></button>
+                                        <span id="dispanser_number" style="padding-left:10px; padding-right:10px;">5</span>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="plus_dispanser_number();"><i class="fa fa-plus"></i></button>
                                         <span>
                                  </div> 
 
@@ -92,19 +92,19 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
 
                             <div class="row" style="padding:20px;">
 
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="checkbox" class="custom-control-input" id="customRadio2" name="example1">
                                         <label class="custom-control-label" for="customRadio2">ბოცების რაოდენობა ერთ დისპანსერზე</label>
                                       
                                     </div>
                                  </div> 
-                                 <div class="col-md-3">
+                                 <div class="col-md-4">
                                     
                                        <span style="padding-left:20px;">
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-plus"></i></button>
-                                        <span>4</span>
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="minus_boca_number();"><i class="fa fa-minus"></i></button>
+                                        <span id="boca_number" style="padding-left:10px; padding-right:10px;"> 5 </span>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="plus_boca_number();"><i class="fa fa-plus"></i></button>
                                         <span>
                                  </div> 
 
@@ -113,7 +113,7 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
 
                             <div class="row" style="padding:20px;">
 
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" class="custom-control-input" id="customRadio13" name="example1">
                                         <label class="custom-control-label" for="customRadio13"></label>
@@ -126,11 +126,11 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                  </div> 
 
                                  
-                                 <div class="col-md-3">
+                                 <div class="col-md-4">
                                     
                                        <span style="padding-left:20px;">
                                         <button type="button" class="btn btn-default btn-circle"><i class="fa fa-plus"></i></button>
-                                        <span>4</span>
+                                        <span style="padding-left:10px; padding-right:10px;">4</span>
                                         <button type="button" class="btn btn-default btn-circle"><i class="fa fa-minus"></i></button>
                                         <span>
                                  </div> 
@@ -147,7 +147,7 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             <div class="row" style="padding:20px;">
                                 <div class="col-md-6">
                                    <p>ერთეულის ფასი</p>
-                                   <h3>119 ₾</h3>
+                                   <h3><span id="bocis_fasi" style="color: #1592e6;">119</span> ₾</h3>
                                 </div> 
 
 
@@ -155,8 +155,8 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
 
                                 <div class="col-md-6">
 
-                                    <p>თვეში ჯამური ღირებულება</p>
-                                    <h3>190 ₾</h3>
+                                    <p>სულ ჯამური ღირებულება</p>
+                                    <h3><span id="sul_fasi" style="color: #1592e6;">0</span> ₾</h3>
                                 </div>
                             </div>
 
@@ -170,6 +170,8 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                     <select class="form-control">
                                         <br>
                                         <option>დისპანსერის მესაკუთრე</option>
+                                        <option>აქვა გეო</option>
+                                        <option>შემკვეთი</option>
                                       </select>
                                 </div>
 
@@ -249,6 +251,95 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
     </div>
 </section>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+
+function plus_dispanser_number(){
+
+    var arsebuli_raodenoba = $('#dispanser_number').text();
+    var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+    var new_text = arebuli_raodenoba_clear+1;
+    document.getElementById("dispanser_number").textContent=new_text;
+    vvv();
+}
+
+function minus_dispanser_number(){
+var arsebuli_raodenoba = $('#dispanser_number').text();
+var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+if(arebuli_raodenoba_clear <1 ){
+alert('არასწორი ნიშნული');
+} else {
+var new_text = arebuli_raodenoba_clear-1;
+document.getElementById("dispanser_number").textContent=new_text;
+}
+vvv();
+}
+
+
+
+
+function plus_boca_number(){
+
+var arsebuli_raodenoba = $('#boca_number').text();
+var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+var new_text = arebuli_raodenoba_clear+1;
+document.getElementById("boca_number").textContent=new_text;
+vvv();
+
+}
+
+function minus_boca_number(){
+var arsebuli_raodenoba = $('#boca_number').text();
+var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+if(arebuli_raodenoba_clear <6 ){
+alert('არასწორი ნიშნული');
+} else {
+var new_text = arebuli_raodenoba_clear-1;
+document.getElementById("boca_number").textContent=new_text;
+}
+vvv();
+}
+
+
+function vvv(){
+
+var dispanser_number = $('#dispanser_number').text();
+var dispanser_number_clear = parseInt(dispanser_number);
+
+if(dispanser_number_clear==0){
+    dispanser_number_clear=1;
+} else {
+    dispanser_number_clear = dispanser_number_clear;
+}
+
+
+
+
+var arsebuli_raodenoba = $('#boca_number').text();
+var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+var bocis_fasi = $('#bocis_fasi').text();
+var bocis_fasi_clear = parseInt(bocis_fasi);
+var jami = ((bocis_fasi_clear * arebuli_raodenoba_clear) *dispanser_number_clear);
+document.getElementById("sul_fasi").textContent=jami;
+}
+
+
+
+
+
+
+
+
+
+
+$("#customRadio1").click( function(){
+   if( $(this).is(':checked') ) alert("checked");
+});
+
+</script>
 
 
 

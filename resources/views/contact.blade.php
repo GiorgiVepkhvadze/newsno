@@ -84,7 +84,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
         <div class="row" style="background-color:#edf4f7; padding-top:30px;">
 
             <div class="col-md-9">
-                <p style="font-size:25px;">შპს აქუა გეო</p>
+                <p style="font-size:25px;">შპს აქვა გეო</p>
             </div>
 
             <div class="col-md-3" align="right">

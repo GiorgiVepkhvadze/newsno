@@ -10,21 +10,21 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
         <div class="row">
 
 
-            <div class="col-lg-12">
-                <div class="about-content mt-30 text-center" style="padding-top:80px; padding-bottom:40px;">
-                    <h3> მინერილიზაცია და შემადგენლობა</h3>
-                   
+            <div class="col-lg-1"> </div>
+            <div class="col-lg-10 text-center" style="padding-top:80px; padding-bottom:40px;"> 
 
-                       <p>
+                <h3 style="color:#78AA66;"> მინერილიზაცია და შემადგენლობა</h3><br>
+                <p>
 
-                        საქართველო მდიდარია წყლის რესურსებით, ჰიდროგეოლოგიური რუქის მიხედვით საქართველოში 730-ზე მეტი სახეობის მინერალური წყალი მოიპოვება, რომელიც განსხვავებულია თავისი უნიკალური თვისებებით. მიზანი სწორედ ამ 730 წყაროდან 1 ყველაზე საუკეთესოს მიგნება იყო, რომელიც შემადგენლობით, გემოვნური თვისებებით და ყველა კრიტერიუმით სრულ თანხვედრაში იქნებოდა მსოფლიო სტანდარტებთან. 
-
-
-                       </p>
+                    საქართველო მდიდარია წყლის რესურსებით, ჰიდროგეოლოგიური რუქის მიხედვით საქართველოში 730-ზე მეტი სახეობის მინერალური წყალი მოიპოვება, რომელიც განსხვავებულია თავისი უნიკალური თვისებებით. მიზანი სწორედ ამ 730 წყაროდან 1 ყველაზე საუკეთესოს მიგნება იყო, რომელიც შემადგენლობით, გემოვნური თვისებებით და ყველა კრიტერიუმით სრულ თანხვედრაში იქნებოდა მსოფლიო სტანდარტებთან. 
 
 
-                </div>
+                   </p>
+
+               
+
             </div>
+            <div class="col-lg-1"> </div>  
 
 
 
@@ -45,20 +45,16 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
         <div class="row mt-60">
             <div class="col-lg-6">
                 <div class="about-content mt-40">
-                    <h3> ოქროს საბადო</h3>
-                    <br><br>
+                    <h3 style="color:#000;"> ოქროს საბადო</h3>
+                    <br>
                     <p>
 
+                        მრავალი კვლევა ძიების შემდეგ კომპანიამ მიაგნო „კობი“-ს 
+წყლის ე.წ. ოქროს საბადოს, რომელიც მსოფლიო ტრენდის 
+მიხედვით დაბალმინერალიზირებული (საშუალო 
+მინერალიზაცია 2 გ/ლ), მაგრამ ამავე დროს კალციუმითა და 
+ნახშირმჟავა იონებით მდიდარი იყო. 
 
-                        @if (app()->getLocale()=="ka")
-                        <p>{!! $Snomineral->sno_mineral_mesame_ka !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="en")
-                        <p>{!! $Snomineral->sno_mineral_mesame_ru !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="ru")
-                        <p>{!! $Snomineral->sno_mineral_mesame_en !!}</p>
-                        @endif
 
                     </p>
 
@@ -101,31 +97,18 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 </section>
 
 <section id="about-part">
-
-  
-
     <div class="row" style="background-color:#363B35; margin-left:0px; margin-right:0px;">
 
         <div class="col" align="right">
-            <img src="{{Request::root()}}/assets/img/kobi_poster_mineral.png" alt="Video">
+            <img src="{{Request::root()}}/assets/img/kobi_poster_mineral.png" alt="Video" style="margin-right: 18%;">
+        </div>
+
+        <div class="col align-middle" align="left"><br><br><br>
+            <img src="{{Request::root()}}/images/kobi_stati.png" alt="Video">
         </div>
 
 
-
-        <div class="col pwite" style="padding-top:110px; padding-left:120px;">
-
-            <h3>სტანდარტები</h3>
-            @if (app()->getLocale()=="ka")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_ka !!}</p>
-            @endif
-            @if (app()->getLocale()=="en")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_en !!}</p>
-            @endif
-            @if (app()->getLocale()=="ru")
-            <p style="color:#fff;">{!! $Snomineral->sno_mineral_mexute_ru !!}</p>
-            @endif
-
-        </div>
+  
 
 
     </div>

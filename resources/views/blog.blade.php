@@ -24,6 +24,7 @@
 
             
                 <div class="col-lg-4 col-md-6">
+                    <a href="open_blog/{{ $Blogdata_row->blog_id }}/">
                     <div class="singel-blog mt-30">
                         <div class="blog-thum">
                             
@@ -34,12 +35,11 @@
                                 <span>{{ $Blogdata_row->blog_time }}</span>
                             </div>
                         </div>
-                        <div class="blog-cont pt-25">
-                            <a href="open_blog/{{ $Blogdata_row->blog_id }}/"><h5>{!! $Blogdata_row->$blog_title !!}</h5></a>
-                            <p> {!! str_limit( $Blogdata_row->$blog_text, 120) !!} </p>
-                            <a href="open_blog/{{ $Blogdata_row->blog_id }}/">{{ __('main.READ_MORE') }}</a>
+                        <div class="blog-cont pt-25 text-center">
+                            <a href="open_blog/{{ $Blogdata_row->blog_id }}/"><h5 style="color:#000;">{!! $Blogdata_row->$blog_title !!}</h5></a>
+                            <a href="open_blog/{{ $Blogdata_row->blog_id }}/" style="color:#00B0F2;">{{ __('main.READ_MORE') }}</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
 
             @endforeach

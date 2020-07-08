@@ -58,9 +58,9 @@
 <section id="about-part">
 
     <div class="row" style="background-color:#1592E6; margin-left:0px; margin-right:0px;">
-
         <div class="col" align="right">
             <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image2 }}" alt="Video">
+            <br><br><br><br>
         </div>
 
 
@@ -69,7 +69,7 @@
     </style>
         <div class="col" style="padding-top:110px; padding-left:120px; color:#fff;">
 
-            <h3 style="color: #FFF;">-წყლის მდებარეობა</h3>
+            <h3 style="color: #FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3>
             @if (app()->getLocale()=="ka")
             <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ka) !!}</p>
             @endif
@@ -107,8 +107,9 @@
 
         <div class="row">
 
-
-            <div class="col-lg-12">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-8">
                 <div class="about-content mt-30 text-center">
                     <h3>დაცული დაბინძურებისგან</h3>
                     @if (app()->getLocale()=="ka")
@@ -123,6 +124,9 @@
         
 
                 </div>
+            </div>
+
+            <div class="col-lg-2">
             </div>
 
         </div>
