@@ -10,17 +10,48 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
             </div>
             <div class="col-lg-8">
                 <div class="section-title text-center">
-                    <h2>კომპანიის ისტორია</h2>
+                    <h2>
+                        
 
-                    @if (app()->getLocale()=="ka")
-                    <p>{!! $Company->company_header_ka !!}</p>
+                        @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "header_geo") }}
+                     
                     @endif
                     @if (app()->getLocale()=="en")
-                    <p>{!! $Company->company_header_en !!}</p>
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "header_eng") }}
+                       
                     @endif
                     @if (app()->getLocale()=="ru")
-                    <p>{!! $Company->company_header_ru !!}</p>
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "header_rus") }}
                     @endif
+
+
+
+                    </h2>
+
+
+                    <p>
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "text_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "text_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("4", "text_rus") }}
+                    @endif
+
+                    </p>
+
 
 
                 </div>
@@ -32,7 +63,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="video pt-45">
-                    <img src="{{Request::root()}}/images/{{ $Company->company_header_image }}" alt="Video">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("4", "image1") }}" alt="Video">
                 </div>
             </div>
         </div>
@@ -50,13 +81,18 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                 <p>
 
                     @if (app()->getLocale()=="ka")
-                        <p>{!! $Company->company_sveti_pirveli_ka !!}</p>
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_erti_geo") !!}
+                     
                     @endif
                     @if (app()->getLocale()=="en")
-                        <p>{!! $Company->company_sveti_pirveli_en !!}</p>
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_erti_eng") !!}
+                       
                     @endif
                     @if (app()->getLocale()=="ru")
-                        <p>{!! $Company->company_sveti_pirveli_ru !!}</p>
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_erti_rus") !!}
                     @endif
 
                 </p>
@@ -67,13 +103,18 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                 <p>
 
                     @if (app()->getLocale()=="ka")
-                        <p>{!! $Company->company_sveti_meore_ka !!}</p>
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_ori_geo") !!}
+                     
                     @endif
                     @if (app()->getLocale()=="en")
-                        <p>{!! $Company->company_sveti_meore_en !!}</p>
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_ori_eng") !!}
+                       
                     @endif
                     @if (app()->getLocale()=="ru")
-                        <p>{!! $Company->company_sveti_meore_ru !!}</p>
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("5", "sveti_ori_rus") !!}
                     @endif
                 </p>
             </div>
@@ -100,18 +141,50 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                 <div class="col-lg-10">
 
                     <div class="about-content mt-30 text-center">
-                        <h3> მიზანი</h3>
+                        <h3> 
+                            
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("6", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("6", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("6", "header_rus") }}
+                    @endif
+
+
+
+                        </h3>
 
     
-                            @if (app()->getLocale()=="ka")
-                                <p>{!! $Company->company_mizani_ka !!}</p>
-                            @endif
-                            @if (app()->getLocale()=="en")
-                                <p>{!! $Company->company_mizani_en !!}</p>
-                            @endif
-                            @if (app()->getLocale()=="ru")
-                                <p>{!! $Company->company_mizani_ru !!}</p>
-                            @endif
+                           <p>
+
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("6", "text_geo") !!}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("6", "text_eng") !!}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("6", "text_rus") !!}
+                    @endif
+
+
+
+                           </p>
     
     
     
@@ -143,7 +216,26 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
             <div class="col-lg-12">
                 <div class="about-content mt-30 text-center">
-                    <h3> ჩვენი საწარმო</h3>
+                    <h3> 
+                        
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("7", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("7", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("7", "header_rus") }}
+                    @endif
+
+
+                    </h3>
 
 
                 </div>
@@ -156,23 +248,34 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="{{Request::root()}}/assets/img/history/qarxana.png" alt="About">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("7", "image1") }}" alt="About">
                 </div>
             </div>
 
 
             <div class="col-lg-6">
                 <div class="about-content mt-10">
-                        @if (app()->getLocale()=="ka")
-                            <p>{!! $Company->company_sawarmo_piveli_ka !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="en")
-                            <p>{!! $Company->company_sawarmo_piveli_en !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="ru")
-                            <p>{!! $Company->company_sawarmo_piveli_ru !!}</p>
-                        @endif
-                    </p>
+                       
+                  
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("7", "text_geo") !!}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("7", "text_eng") !!}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("7", "text_rus") !!}
+                    @endif
+
+
+
+                   
 
                 </div>
             </div>
@@ -195,13 +298,18 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
 
                         @if (app()->getLocale()=="ka")
-                            <p>{!! $Company->company_sawarmo_meore_ka !!}</p>
+                  
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("8", "text_geo") !!}
+                         
                         @endif
                         @if (app()->getLocale()=="en")
-                            <p>{!! $Company->company_sawarmo_meore_ru !!}</p>
+    
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("8", "text_eng") !!}
+                           
                         @endif
                         @if (app()->getLocale()=="ru")
-                            <p>{!! $Company->company_sawarmo_meore_en !!}</p>
+    
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("8", "text_rus") !!}
                         @endif
 
 
@@ -220,7 +328,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
 
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="{{Request::root()}}/assets/img/history/botlebi.PNG" alt="About">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("8", "image1") }}" alt="About">
                 </div>
             </div>
 

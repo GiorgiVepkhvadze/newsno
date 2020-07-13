@@ -9,7 +9,7 @@
             
             <div class="col-lg-12">
                 <div class="about-content mt-30 text-center" style="padding-top:80px;">
-                    <h3> კონტაქტი</h3>
+                    <h3> {{ __('main.CONTACT') }}</h3>
 
                    
                 </div>
@@ -40,30 +40,30 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="singel-form form-group">
-                                    <input name="name" type="text" placeholder="სახელი" required="required">
+                                    <input name="name" type="text" placeholder="{{ __('main.CONTACT_NAME') }}" required="required">
                                     
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="singel-form form-group">
-                                    <input type="email" name="email" placeholder="ელ ფოსტა" required="required">
+                                    <input type="email" name="email" placeholder="{{ __('main.CONTACT_EMAIL') }}" required="required">
                                     
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="singel-form form-group">
-                                    <label>&nbsp; შეტყობინება :</label>
-                                    <textarea name="message" placeholder="| მიუთითეთ შეტყობინება" required="required"></textarea>
+                                    <label>&nbsp; {{ __('main.CONTACT_SHT') }} :</label>
+                                    <textarea name="message" placeholder="| {{ __('main.CONTACT_MSG') }}" required="required"></textarea>
                                    
                                 </div>
                             </div>
                             <p class="form-message"></p>
                             <div class="col-md-12">
                                 <div class="singel-form">
-                                    <span type="submit" onclick="alert('a');">გაგზავნა</span>
+                                    <span type="submit" onclick="alert('a');">{{ __('main.CONTACT_SND') }}</span>
                                 </div>
                             </div>
-
+                            
                             
                         </div>
                     </form>
@@ -88,7 +88,7 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
             </div>
 
             <div class="col-md-3" align="right">
-                info@aquageo.ge
+                {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_email") }}
             </div>
 
         </div>
@@ -97,19 +97,40 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
         <div class="row" style="background-color:#edf4f7; padding-bottom:30px;">
 
             <div class="col-md-5">
-                    <p style="font-size:14px;">საქართველო, მცხეთის რაიონი, სოფ. მისაქციელი 3308</p>
+                    <p style="font-size:14px;">
+                    
+                    
+                    
+                        @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_address_ka") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_address_en") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_address_ru") }}
+                    @endif
+                    
+                    </p>
             </div>
 
             <div class="col-md-2">
-                +995 592 003 937
+                {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_phone") }}
             </div>
 
             <div class="col-md-2">
-                +995 322 470 410
+                {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_phone2") }}
             </div>
 
             <div class="col-md-3" align="right">
-                Fax: +995 322 470 411
+
+                Fax: {{ \App\Helpers\AppHelper::instance()->get_contact_info("contact_fax") }}
+                 
             </div>
 
 

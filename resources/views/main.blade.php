@@ -8,17 +8,53 @@
            
             <div class="col-lg-5">
                 <div class="about-content mt-30" style="padding-top:140px;">
-                    <h2> წყალი არის სნო</h2> <br>
-                    <p>წყლის მოპოვება 150 მეტრის სიღმიდან ხდება. წყლის რესურსი მიწის ზედაპირიდან  4 წყალგაუმტარი შრით არის იზოლირებული და ამის გამო  ის ნატურალურად არის დაცული ნებისმიერი სახის დაბინძურებისგან</p>
+                    <h2>
+                        
+                     
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "header_rus") }}
+                    @endif
+                    
+                    </h2> 
+                    
+                    <br>
+                    <p>
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "text_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "text_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("1", "text_rus") }}
+                    @endif
+                    
+                    
+                    </p>
                    
                 </div>
             </div>
 
-
             
               <div class="col-lg-7" align="right" style="padding-top:70px;">
                 <div class="mt-30">
-                    <img src="{{Request::root()}}/assets/img/main_photo.PNG" class="responsive" alt="About">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("1", "image1") }}" class="responsive" alt="About">
                 </div>
              </div>
             
@@ -54,9 +90,45 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-15 pt-80">
-                    <h2>ჩვენი პროდუქცია</h2><br>
-                    <p>ჩვენ ვქმნით პროდუქტს, რომელიც ყოველ ნაბიჯზე ცვლის შენი 
-                        ცხოვრების სტილსა და ხარისხს </p>
+                    <h2>
+                        
+                        
+                         
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "header_rus") }}
+                    @endif
+                        </h2><br>
+                    <p>
+                        
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "text_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "text_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("2", "text_rus") }}
+                    @endif
+
+
+                    </p>
 
                 </div>
             </div>
@@ -65,7 +137,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <a href="{{Request::root()}}/sno_product" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_one.PNG" alt="Products"></a>
+                        <a href="{{Request::root()}}/sno_product" style="color:#000;"><img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("2", "image1") }}" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
@@ -77,7 +149,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <a href="{{Request::root()}}/sno_limoni" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_two.png" alt="Products"></a>
+                        <a href="{{Request::root()}}/sno_limoni" style="color:#000;"><img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("2", "image2") }}" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
@@ -89,7 +161,7 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-4 col-md-6 col-sm-6"  align="center">
                 <div class="singel-products mt-30">
                     <div class="products-image">
-                        <a href="{{Request::root()}}/kobi_product" style="color:#000;"><img src="{{Request::root()}}/assets/img/products/main_three.png" alt="Products"></a>
+                        <a href="{{Request::root()}}/kobi_product" style="color:#000;"><img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("2", "image3") }}" alt="Products"></a>
                         
                     </div>
                     <div class="products-contant">
@@ -119,13 +191,41 @@ background: linear-gradient(180deg, rgba(234,244,251,0.9724264705882353) 15%, rg
             <div class="col-lg-6" style="background-color:#e9f9ff; margin-left:0px; margin-right:0px;" align="center">
                 <div class="about-content mt-30">
                     <br><br><br><br>
-                    <h2>ჩვენ ვქმნით სნოს</h2> <br>
-                    <p>კომპანიაში ყოველი თანამშრომელი თავისი <br>
-                         კომპეტენციისა და პიროვნული თვისებების <br>
-                          მიხედვით შეირჩა. საწარმოს პერსონალმა გაიარა <br>
-                           სასწავლო კურსი ფრანგი და იტალიელი <br>
-                            სპეციალისტების ხელმძღვანელობით.
-                    </p>
+                    <h3> @if (app()->getLocale()=="ka")
+                  
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "header_geo") }}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "header_eng") }}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "header_rus") }}
+                        @endif</h3> <br>
+                       <p style="    padding-left: 15%;
+                       padding-right: 15%;">
+                        
+
+                        @if (app()->getLocale()=="ka")
+                  
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "text_geo") }}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "text_eng") }}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("3", "text_rus") }}
+                        @endif
+
+
+                       </p>
 
                     <a href="" style="color:#00B0F2;"><u>გაიგე მეტი</u></a>
                    

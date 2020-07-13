@@ -46,32 +46,32 @@ class ClientController extends Controller
 
     public function about()
     {
-        $Company = Company::find(1);
+        $Company = "1";
         return view('about', compact('Company'));
     }
 
     public function export()
     {
-        $Eksporti = Eksporti::find(1);
+        $Eksporti = "1";
         return view('export', compact('Eksporti'));
     }
 
     public function sno_likage()
     {
-        $Snolikage = Snolikage::find(1);
+        $Snolikage = "1";
         return view('sno_likage', compact('Snolikage'));
     }
 
     public function sno_quality()
     {
-        $Snoxarisxi = Snoxarisxi::find(1);
+        $Snoxarisxi = "1";
         return view('sno_quality', compact('Snoxarisxi'));
     }
 
 
     public function sno_mineral()
     {
-        $Snomineral = Snomineral::find(1);
+        $Snomineral = "1";
         return view('sno_mineral', compact('Snomineral'));
     }
 
@@ -83,7 +83,7 @@ class ClientController extends Controller
 
     public function kobi_likage()
     {
-        $Kobilikage = Kobilikage::find(1);
+        $Kobilikage = "1";
         return view('kobi_likage', compact('Kobilikage'));
     }
 
@@ -128,13 +128,21 @@ class ClientController extends Controller
     public function kobi_mineral()
     {
 
-        $Snomineral = Snomineral::find(1);
+        $Snomineral = "1";
         return view('kobi_mineral', compact('Snomineral'));
 
        
     }
 
 
+
+
+
+    public function admin_login_page()
+    {
+
+        return view('cpadmin/login');
+    }
 
 
 

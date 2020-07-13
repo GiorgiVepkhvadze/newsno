@@ -13,25 +13,52 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
             
             <div class="col-lg-6">
                 <div class="about-content mt-30 text-left" style="padding-top:80px;">
-                    <h3> ონლაინ შეკვეთა</h3>
-<p>
-    კომპანია „აქვა გეო“-ს დისპენსერის გამოყენება სახლებსა თუ ოფისებში სასმელი წყლის მოხმარების კომფორტული საშუალებაა. მისი გამოყენება განსაკუთრებით მნიშვნელოვანია საბავშვო ბაღებსა და მცირეწლოვან ბავშვებიან ოჯახებში.
- 
-<br><br>
-პრემიუმ კლასის დისპენსერი უზრუნველყოფს წყლის საჭირო ტემპერატურის მიღწევას: გაცხელებას, გაგრილებას და ტემპერატურის შენარჩუნებას.
- 
-<br><br>
-დისპენსერი დამზადებულია უჟანგავი ლითონის მილებით, რაც  წყალს დაბინძურებისგან იცავს. დანადგარი აღჭურვილია ულტრაიისფერი  შუქის ინდიკატორებით,  ცივი და ცხელი წყლის რეზერვუარებით,  ასევე  ჭიქის დამჭერითა  და ბოთლის  ადაპტორის სარქველით.
- 
-<br><br>
-კომპანია „აქვა გეო“ ასევე გთავაზობთ პრემიუმ კლასის მაცივრიან დისპენსერს.  დისპენსერის სამაცივრე განყოფილება თავისი შესაძლებლობებით განსაკუთრებით კომფორტულია საოფისე პირობებში.
- 
-<br><br>
-დისპენსერის ეფექტურად გამოყენებისთვის „აქვა გეო“ მომხმარებელს დამატებით სერვისს სთავაზობს. წყლის სისუფთავის შენარჩუნების მიზნით მხოლოდ „აქვა გეო“ უზრუნველყოფს დისპენსერისა და წყლის  ბალონის პერიოდულ სანიტარიზაციას ევროპული სტანდარტების შესაბამისად. აღნიშნული სერვისი საშუალებას იძლევა უცვლელად შევინარჩუნოთ წყლის მაღალი ხარისხი.
+                    <h3> 
+                        
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("30", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("30", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("30", "header_rus") }}
+                    @endif
 
 
 
-</p>
+
+                    </h3>
+
+                    <p>
+                    @if (app()->getLocale()=="ka")
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("30", "text_geo") !!}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("30", "text_eng") !!}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("30", "text_rus") !!}
+                    @endif
+
+
+                </p>
+
+
+
+
+
                    
                 </div>
             </div>
@@ -118,8 +145,8 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                         <input type="radio" class="custom-control-input" id="customRadio13" name="example1">
                                         <label class="custom-control-label" for="customRadio13"></label>
                                         
-                                        <select class="form-control" width="220">
-                                            <option>სხვა პროდუქცია</option>
+                                        <select class="form-control" width="250">
+                                            <option>სხვა პროდუქცია &nbsp; &nbsp;</option>
                                         </select>
                                     </div>
     

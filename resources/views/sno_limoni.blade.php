@@ -6,12 +6,51 @@
     <div class="container">
         <div class="row mt-60" >
             <div class="col-lg-6">
-                <div class="about-content mt-40">
-                    <p>პირველი ქართული არომატიზირებული წყალი</p>
-                    <h3 style="color:#000;">„სნო“ ლიმონის არომატით </h3>
+                <div class="about-content mt-80">
+                   
+                    <h3 style="color:#000;">
+                        
+                        
+                        
+                        @if (app()->getLocale()=="ka")
+                  
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "header_geo") }}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "header_eng") }}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+    
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "header_rus") }}
+                        @endif
+    
+                        
+                        
+                        
+                        
+                         </h3>
                     <p> 
-                        პროდუქტი იწარმოება ნატურალური მინერალური წყლით 
-                        „სნო“ და ლიმონის ნატურალური არომატიზატორით.
+                       
+                        @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "text_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "text_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("31", "text_rus") }}
+                    @endif
+
+
+
                     
                     </p>
                 </div>
@@ -32,7 +71,7 @@
           background-image:url('{{Request::root()}}/assets/img/limoni_sno_bottom.svg'); 
           background-size: 100%; 
           background-position: top;
-          height:160px;
+          height:140px;
           width:100%;
           margin-left:0px;
           margin-right:0px;
@@ -44,9 +83,9 @@
 
 
 
-<section id="about-part" class="pt-10">
+<section id="about-part">
     <div class="container">
-        <div class="row mt-60">
+        <div class="row mt-10">
 
 
 
@@ -59,7 +98,7 @@
 
             <div class="col-lg-6">
                 <div class="about-content mt-40">
-                    <h3> სნო ლიმონის არომატით
+                    <h3 style="color:#FDB344;"> სნო ლიმონის არომატით
 
                         რომელიც არ შეიცავს:
                     </h3>

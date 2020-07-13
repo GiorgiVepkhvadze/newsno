@@ -13,5 +13,12 @@ class Contact extends Model
   public $timestamps = false;
 
 
+  public static function get_contact(){
+    $value=DB::table('contact')->where('contact_id', '1')->first();
+    return $value;
+  }
+
+
+
 
 }

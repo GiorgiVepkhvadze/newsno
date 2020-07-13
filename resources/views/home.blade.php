@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="0; URL='snoadmin/home'" />
+<meta http-equiv="refresh" content="0; URL='pesadmin/home'" />

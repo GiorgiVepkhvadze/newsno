@@ -11,16 +11,41 @@
 
             <div class="col-lg-6">
                 <div class="about-content mt-30" style="padding-top:140px;">
-                    <h3> წყლის წარმომავლობა</h3>
+                    <h3> 
+                        
 
                     @if (app()->getLocale()=="ka")
-                    <p>{!! $Snolikage->sno_likage_text_pirveli_ka !!}</p>
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("9", "header_geo") }}
+                     
                     @endif
                     @if (app()->getLocale()=="en")
-                    <p>{!! $Snolikage->sno_likage_text_pirveli_en !!}</p>
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("9", "header_eng") }}
+                       
                     @endif
                     @if (app()->getLocale()=="ru")
-                    <p>{!! $Snolikage->sno_likage_text_pirveli_ru !!}</p>
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("9", "header_rus") }}
+                    @endif
+
+
+                    </h3>
+                    <br>
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("9", "text_geo") !!}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("9", "text_eng") !!}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {!! \App\Helpers\AppHelper::instance()->get_content_text("9", "text_rus") !!}
                     @endif
     
 
@@ -31,7 +56,7 @@
 
             <div class="col-lg-6" align="right">
                 <div class="mt-30">
-                    <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image1 }}" alt="Video">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("9", "image1") }}" alt="Video">
                 </div>
             </div>
 
@@ -63,11 +88,33 @@
         </div>
         
         <div class="col-lg-5" align="right" style="padding-right:8%;">
-            <img src="{{Request::root()}}/images/{{ $Snolikage->sno_likage_image2 }}" alt="Video">
+            <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("10", "image1") }}" alt="Video">
         </div>
 
         <div class="col-lg-5" style="padding-top:110px; padding-left:120px; color:#fff;">
-            <h3 style="color: #FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3><br>
+            <h3 style="color: #FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">
+            
+            
+                @if (app()->getLocale()=="ka")
+                  
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("10", "header_geo") }}
+                 
+                @endif
+                @if (app()->getLocale()=="en")
+
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("10", "header_eng") }}
+                   
+                @endif
+                @if (app()->getLocale()=="ru")
+
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("10", "header_rus") }}
+                @endif  
+            
+            
+            </h3><br>
+
+
+
             @if (app()->getLocale()=="ka")
             <p style="color: #FFF;">{!! strip_tags($Snolikage->sno_likage_text_meore_ka) !!}</p>
             @endif
@@ -112,15 +159,47 @@
             </div>
             <div class="col-lg-8">
                 <div class="about-content mt-30 text-center">
-                    <h3>დაცული დაბინძურებისგან</h3>
+                    <h3>
+                        
+                        @if (app()->getLocale()=="ka")
+                  
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("11", "header_geo") }}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+        
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("11", "header_eng") }}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+        
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("11", "header_rus") }}
+                        @endif  
+
+
+                    </h3>
                     @if (app()->getLocale()=="ka")
-                    <p>{!! $Snolikage->sno_likage_text_mesame_ka !!}</p>
-                    @endif
-                    @if (app()->getLocale()=="en")
-                    <p>{!! $Snolikage->sno_likage_text_mesame_ru !!}</p>
-                    @endif
-                    @if (app()->getLocale()=="ru")
-                    <p>{!! $Snolikage->sno_likage_text_mesame_en !!}</p>
+                    <p>
+                        
+                    
+                        @if (app()->getLocale()=="ka")
+                  
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("11", "text_geo") !!}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+    
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("11", "text_eng") !!}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+    
+                        {!! \App\Helpers\AppHelper::instance()->get_content_text("11", "text_rus") !!}
+                        @endif
+                    
+                    
+                    
+                    </p>
                     @endif
         
 

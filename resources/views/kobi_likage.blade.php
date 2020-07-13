@@ -12,18 +12,42 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
             <div class="col-lg-6">
                 <div class="about-content mt-30" style="padding-top:100px;">
-                    <h3 style="color:#78AA66;"> წყლის წარმომავლობა
-                        და ხარისხი</h3>
-
+                    <h3 style="color:#78AA66;"><br>
+                        
+                    
                         @if (app()->getLocale()=="ka")
-                        <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_pirveli_ka !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="en")
-                        <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_pirveli_en !!}</p>
-                        @endif
-                        @if (app()->getLocale()=="ru")
-                        <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_pirveli_ru !!}</p>
-                        @endif
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "header_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "header_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "header_rus") }}
+                    @endif
+                    
+                    
+                    
+                    </h3><br>
+
+                    @if (app()->getLocale()=="ka")
+                  
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "text_geo") }}
+                     
+                    @endif
+                    @if (app()->getLocale()=="en")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "text_eng") }}
+                       
+                    @endif
+                    @if (app()->getLocale()=="ru")
+
+                    {{ \App\Helpers\AppHelper::instance()->get_content_text("21", "text_rus") }}
+                    @endif
 
                 </div>
             </div>
@@ -32,7 +56,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
             <div class="col-lg-6" align="right">
                 <div class="mt-60">
-                    <img src="{{Request::root()}}/images/{{ $Kobilikage->kobi_likage_image1 }}" alt="Video">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("21", "image1") }}" alt="Video">
 
                 </div>
             </div>
@@ -62,22 +86,56 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
     <div class="row" style="background-color:#7E9177; margin-left:0px; margin-right:0px;">
 
         <div class="col-lg-2"></div>
-        <div class="col-lg-4"><img src="{{Request::root()}}/images/{{ $Kobilikage->kobi_likage_image2 }}" alt="Video">
+        <div class="col-lg-4"><img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("22", "image1") }}" alt="Video">
         <br><br>
 
         </div>
         <div class="col-lg-5" style="padding-top:80px;">
             
-            <h3 style="color:#FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">წყლის მდებარეობა</h3> <br>
+            <h3 style="color:#FFF;"><img src="{{Request::root()}}/images/Rectangle 3127.png">
+            
+            
+                  
+                @if (app()->getLocale()=="ka")
+                  
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "header_geo") }}
+                 
+                @endif
+                @if (app()->getLocale()=="en")
+
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "header_eng") }}
+                   
+                @endif
+                @if (app()->getLocale()=="ru")
+
+                {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "header_rus") }}
+                @endif
+                
+            
+            
+            
+            </h3> <br><br>
+            
+            
+
             @if (app()->getLocale()=="ka")
-            <p style="color:#fff;">{!! strip_tags($Kobilikage->kobi_likage_text_meore_ka) !!}</p>
+                  
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "text_geo") }}
+             
             @endif
             @if (app()->getLocale()=="en")
-            <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_meore_en !!}</p>
+
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "text_eng") }}
+               
             @endif
             @if (app()->getLocale()=="ru")
-            <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_meore_ru !!}</p>
+
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("22", "text_rus") }}
             @endif
+
+
+
+
         <div class="col-lg-1"></div>
 
 
@@ -109,16 +167,48 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(120,170,102,0.269
 
             <div class="col-lg-12">
                 <div class="about-content mt-10 text-center" style="padding-bottom: 30px;">
-                    <h3 style="color:#78AA66;">წყლის ტექნოლოგია</h3>
+                    <h3 style="color:#78AA66;">
+                    
+                        @if (app()->getLocale()=="ka")
+                  
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "header_geo") }}
+                         
+                        @endif
+                        @if (app()->getLocale()=="en")
+        
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "header_eng") }}
+                           
+                        @endif
+                        @if (app()->getLocale()=="ru")
+        
+                        {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "header_rus") }}
+                        @endif
+                    
+                    
+                    
+                    
+                    </h3>
+                   <br><br>
+                    
+
                     @if (app()->getLocale()=="ka")
-                    <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_mesame_ka !!}</p>
-                    @endif
-                    @if (app()->getLocale()=="en")
-                    <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_mesame_ru !!}</p>
-                    @endif
-                    @if (app()->getLocale()=="ru")
-                    <p style="color:#fff;">{!! $Kobilikage->kobi_likage_text_mesame_en !!}</p>
-                    @endif
+                  
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "text_geo") }}
+             
+            @endif
+            @if (app()->getLocale()=="en")
+
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "text_eng") }}
+               
+            @endif
+            @if (app()->getLocale()=="ru")
+
+            {{ \App\Helpers\AppHelper::instance()->get_content_text("23", "text_rus") }}
+            @endif
+
+
+
+
 საწარმოს გააჩნია საერთაშორისო სერთიფიკატები <br><br>
 
 

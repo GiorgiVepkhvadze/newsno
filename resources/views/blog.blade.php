@@ -37,6 +37,7 @@
                         </div>
                         <div class="blog-cont pt-25 text-center">
                             <a href="open_blog/{{ $Blogdata_row->blog_id }}/"><h5 style="color:#000;">{!! $Blogdata_row->$blog_title !!}</h5></a>
+                            <br>
                             <a href="open_blog/{{ $Blogdata_row->blog_id }}/" style="color:#00B0F2;">{{ __('main.READ_MORE') }}</a>
                         </div>
                     </div></a>

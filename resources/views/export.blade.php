@@ -7,7 +7,7 @@ background: linear-gradient(0deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 10
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="video pt-45">
-                    <img src="{{Request::root()}}/images/{{ $Eksporti->eksporti_header_image }}" alt="Video">
+                    <img src="{{Request::root()}}/{{ \App\Helpers\AppHelper::instance()->get_content_img("27", "image1") }}" alt="Video">
                 </div>
             </div>
         </div>
@@ -28,13 +28,18 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
             <div class="col-lg-6">
 
                 @if (app()->getLocale()=="ka")
-                <p>{!! $Eksporti->eksporti_pirveli_ka !!}</p>
+                  
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_erti_geo") !!}
+                 
                 @endif
                 @if (app()->getLocale()=="en")
-                <p>{!! $Eksporti->eksporti_pirveli_en !!}</p>
+
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_erti_eng") !!}
+                   
                 @endif
                 @if (app()->getLocale()=="ru")
-                <p>{!! $Eksporti->eksporti_pirveli_ru !!}</p>
+
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_erti_rus") !!}
                 @endif
 
 
@@ -44,16 +49,21 @@ background: linear-gradient(180deg, rgba(220,236,247,1) 0%, rgba(255,255,255,1) 
             <div class="col-lg-6">
 
 
+               
                 @if (app()->getLocale()=="ka")
-                <p>{!! $Eksporti->eksporti_meore_ka !!}</p>
+                  
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_ori_geo") !!}
+                 
                 @endif
                 @if (app()->getLocale()=="en")
-                <p>{!! $Eksporti->eksporti_meore_en !!}</p>
+
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_ori_eng") !!}
+                   
                 @endif
                 @if (app()->getLocale()=="ru")
-                <p>{!! $Eksporti->eksporti_meore_ru !!}</p>
-                @endif
 
+                {!! \App\Helpers\AppHelper::instance()->get_content_text("28", "sveti_ori_rus") !!}
+                @endif
 
 
             </div>
