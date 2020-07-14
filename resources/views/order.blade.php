@@ -169,7 +169,7 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                             <option>სხვა პროდუქცია &nbsp; &nbsp;</option>
 
                                             @foreach ($OrderProducts as $OrderProduct)
-                                                <option value="{{ $OrderProduct->order_product_id }}">
+                                                <option value="{{ $OrderProduct->order_product_id }}" data-productPrice="{{ $OrderProduct->order_product_price }}">
                                                             
                                                         @if (app()->getLocale()=="ka")
                                 
@@ -197,9 +197,10 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                  <div class="col-md-4">
                                     
                                        <span style="padding-left:20px;">
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-plus"></i></button>
-                                        <span style="padding-left:10px; padding-right:10px;">4</span>
-                                        <button type="button" class="btn btn-default btn-circle"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="minus_product_number();"><i class="fa fa-minus"></i></button>
+                                        <span style="padding-left:10px; padding-right:10px;" id="product_count">4</span>
+                                        <button type="button" class="btn btn-default btn-circle" onclick="plus_product_number();"><i class="fa fa-plus"></i></button>
+
                                         <span>
                                  </div> 
 
@@ -346,6 +347,23 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
+function minus_product_number()
+{
+    var arsebuli_raodenoba = $('#product_count').text();
+    var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+    var new_text = arebuli_raodenoba_clear-1;
+    document.getElementById("product_count").textContent=new_text;
+    vvv();
+}
+
+function plus_product_number()
+{
+    var arsebuli_raodenoba = $('#product_count').text();
+    var arebuli_raodenoba_clear = parseInt(arsebuli_raodenoba);
+    var new_text = arebuli_raodenoba_clear+1;
+    document.getElementById("product_count").textContent=new_text;
+    vvv();
+}
 
 
 function plus_dispanser_number(){
