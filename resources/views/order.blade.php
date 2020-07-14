@@ -101,16 +101,16 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             <div class="row" style="padding:20px;">
                                 <div class="col-md-8">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" id="customRadio1" name="example1">
-                                        <label class="custom-control-label" for="customRadio1">დისპენსერების რაოდენობა</label>
+                                        <input type="checkbox" class="custom-control-input" id="dispanseri" name="example1">
+                                        <label class="custom-control-label" for="dispanseri">დისპენსერების რაოდენობა</label>
                                       
                                     </div>
                                  </div> 
                                  <div class="col-md-4">
                                        <span style="padding-left:20px;">
-                                        <button type="button" class="btn btn-default btn-circle" onclick="minus_dispanser_number();"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-default btn-circle dispanser" onclick="minus_dispanser_number();" disabled><i class="fa fa-minus"></i></button>
                                         <span id="dispanser_number" style="padding-left:10px; padding-right:10px;">5</span>
-                                        <button type="button" class="btn btn-default btn-circle" onclick="plus_dispanser_number();"><i class="fa fa-plus"></i></button>
+                                        <button type="button" class="btn btn-default btn-circle dispanser" onclick="plus_dispanser_number();" disabled><i class="fa fa-plus"></i></button>
                                         <span>
                                  </div> 
 
@@ -122,7 +122,27 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                 <div class="col-md-8">
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="checkbox" class="custom-control-input" id="customRadio2" name="example1">
-                                        <label class="custom-control-label" for="customRadio2">ბოცების რაოდენობა ერთ დისპანსერზე</label>
+                                        <label class="custom-control-label" for="customRadio2">
+                                            
+
+                                            @if (app()->getLocale()=="ka")
+                  
+                                                {{ $Boci->boci_title_ka }}
+                                             
+                                            @endif
+                                            @if (app()->getLocale()=="en")
+                        
+                                                {{ $Boci->boci_title_en }}
+                                               
+                                            @endif
+                                            @if (app()->getLocale()=="ru")
+                        
+                                                {{ $Boci->boci_title_ru }}
+
+                                            @endif
+                                        
+                                        
+                                        </label>
                                       
                                     </div>
                                  </div> 
@@ -147,6 +167,27 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                                         
                                         <select class="form-control" width="250">
                                             <option>სხვა პროდუქცია &nbsp; &nbsp;</option>
+
+                                            @foreach ($OrderProducts as $OrderProduct)
+                                                <option value="{{ $OrderProduct->order_product_id }}">
+                                                            
+                                                        @if (app()->getLocale()=="ka")
+                                
+                                                            {{ $OrderProduct->order_product_title_ka }}
+                                                        
+                                                        @endif
+                                                        @if (app()->getLocale()=="en")
+                                    
+                                                            {{ $OrderProduct->order_product_title_en }}
+                                                        
+                                                        @endif
+                                                        @if (app()->getLocale()=="ru")
+                                    
+                                                            {{ $OrderProduct->order_product_title_ru }}
+
+                                                        @endif
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
     
@@ -174,7 +215,7 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             <div class="row" style="padding:20px;">
                                 <div class="col-md-6">
                                    <p>ერთეულის ფასი</p>
-                                   <h3><span id="bocis_fasi" style="color: #1592e6;">119</span> ₾</h3>
+                                   <h3><span id="bocis_fasi" style="color: #1592e6;">{{ $Boci->boci_price }}</span> ₾</h3>
                                 </div> 
 
 
@@ -251,7 +292,7 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
                             <div class="col-md-2">
 
                                 <div class="singel-form">
-                                    <span type="submit" onclick="alert('a');">შეკვეთა</span>
+                                    <span type="submit" onclick="showModal();">შეკვეთა</span>
                                 </div>
                               
 
@@ -277,6 +318,29 @@ background: linear-gradient(180deg, rgba(206,234,246,1) 0%, rgba(255,255,255,1) 
         </div>
     </div>
 </section>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -362,15 +426,32 @@ document.getElementById("sul_fasi").textContent=jami;
 
 
 
-$("#customRadio1").click( function(){
-   if( $(this).is(':checked') ) alert("checked");
+$("#dispanseri").click( function(){
+   if( $(this).is(':checked') )
+   {
+        $(".dispanser").removeAttr('disabled');
+   }
+   else
+   {
+    $(".dispanser").attr('disabled','true');
+   }
 });
+
+function showModal()
+{
+    $('#myModal').modal('show')
+}
 
 </script>
 
 
 
 
+<script>
+    $(document).ready(function() {
+        
+    });
+</script>
 
 
 

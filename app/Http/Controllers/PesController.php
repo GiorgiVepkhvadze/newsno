@@ -12,6 +12,8 @@ use App\Contact;
 use App\Blog;
 use App\Sno_products;
 use App\Kobi_products;
+use App\Boci;
+use App\OrderProduct;
 
 class PesController extends Controller
 {
@@ -44,6 +46,71 @@ class PesController extends Controller
         $contenti = Content::get_content($id);
         return view('cpadmin/content_edit')->with(compact('contenti')); 
         
+    }
+
+    public function boci($id)
+    {
+        $Boci = Boci::findOrFail($id);
+        return view('cpadmin/boci',compact('Boci'));
+    }
+
+
+    public function updateBoci(Request $request, $id)
+    {
+        $Boci = Boci::find($id);
+        $Boci->boci_title_ka = $request->boci_title_ka;
+        $Boci->boci_title_en = $request->boci_title_en;
+        $Boci->boci_title_ru = $request->boci_title_ru;
+        $Boci->boci_price = $request->boci_price;
+        $Boci->save();
+        
+        return redirect()->back();
+    }
+    
+    public function orderProduct()
+    {
+        $orderProducts = OrderProduct::all();
+        return view('cpadmin/orderProduct',compact('orderProducts'));
+    }
+
+    public function orderProductPost(Request $request)
+    {
+        $OrderProduct = new OrderProduct;
+        $OrderProduct->order_product_title_ka = $request->order_product_title_ka;
+        $OrderProduct->order_product_title_en = $request->order_product_title_en;
+        $OrderProduct->order_product_title_ru = $request->order_product_title_ru;
+        $OrderProduct->order_product_price = $request->order_product_price;
+        $OrderProduct->save();
+        
+        return redirect()->back();
+    }
+
+    public function orderProductEdit($id)
+    {
+
+        $OrderProduct = OrderProduct::find($id);
+        return view('cpadmin/orderProductEdit',compact('OrderProduct'));
+
+    }
+
+    public function orderProductUpdate(Request $request, $id)
+    {
+        $OrderProduct = OrderProduct::find($id);
+        $OrderProduct->order_product_title_ka = $request->order_product_title_ka;
+        $OrderProduct->order_product_title_en = $request->order_product_title_en;
+        $OrderProduct->order_product_title_ru = $request->order_product_title_ru;
+        $OrderProduct->order_product_price = $request->order_product_price;
+        $OrderProduct->save();
+        
+        return redirect()->back();
+    }
+
+    public function orderProductDelete($id)
+    {
+        $OrderProduct = OrderProduct::find($id);
+        $OrderProduct->delete();
+
+        return redirect()->back();
     }
 
 

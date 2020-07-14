@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2020 at 07:50 AM
+-- Generation Time: Jul 14, 2020 at 02:00 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `snodb`
+-- Database: `newsno`
 --
 
 -- --------------------------------------------------------
@@ -52,6 +52,27 @@ INSERT INTO `blog` (`blog_id`, `blog_title_ka`, `blog_title_en`, `blog_title_ru`
 (15, 'როგორ ავიცილოთ დეჰიტრატაცია', '', '', '', '', '', 'blogi4.png', NULL, '2020-06-21 12:20:59', 0),
 (16, 'ბლოგის სათაური ქართულად', 'ბლოგის სათაური ინგლისურად', 'ბლოგის სათაური რუსულად', '<p>&nbsp;</p>\r\n\r\n<p>ტექსტი ქართულად</p>\r\n\r\n<p>&nbsp;</p>', '<p>&nbsp;</p>\r\n\r\n<p>ტექსტი ინგლისურად</p>\r\n\r\n<p>&nbsp;</p>', '<p>&nbsp;</p>\r\n\r\n<p>ტექსტი რუსულად</p>\r\n\r\n<p>&nbsp;</p>', 'C:\\xampp\\htdocs\\newsno\\public/images//1594656917_172X83_1.jpg', '15946569151.jpg', '2020-07-13 16:15:12', 0),
 (18, 'სათაური ქართულად', 'dfg', 'dfgdfg', '<p>dfgdfg</p>', '<p>dfgdfg</p>', '<p>dfg</p>', '1594657013_172X83_12.jpg', '159465701312.jpg', '2020-07-13 16:16:52', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `boci`
+--
+
+CREATE TABLE `boci` (
+  `boci_id` int(11) NOT NULL,
+  `boci_title_ka` varchar(999) NOT NULL,
+  `boci_title_en` varchar(999) NOT NULL,
+  `boci_title_ru` varchar(999) NOT NULL,
+  `boci_price` varchar(999) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `boci`
+--
+
+INSERT INTO `boci` (`boci_id`, `boci_title_ka`, `boci_title_en`, `boci_title_ru`, `boci_price`) VALUES
+(1, 'ბოცების რაოდენობა ერთ დისპანსერზე', 'ბოცების რაოდენობა ერთ დისპანსერზე en', 'ბოცების რაოდენობა ერთ დისპანსერზე', '121');
 
 -- --------------------------------------------------------
 
@@ -229,6 +250,27 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `order_product`
+--
+
+CREATE TABLE `order_product` (
+  `order_product_id` int(111) NOT NULL,
+  `order_product_title_ka` varchar(999) NOT NULL,
+  `order_product_title_en` varchar(999) NOT NULL,
+  `order_product_title_ru` varchar(999) NOT NULL,
+  `order_product_price` varchar(999) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `order_product`
+--
+
+INSERT INTO `order_product` (`order_product_id`, `order_product_title_ka`, `order_product_title_en`, `order_product_title_ru`, `order_product_price`) VALUES
+(1, 'პროდუქტი 1', 'Product 1', 'Product 1 RUSULAD', '23');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `password_resets`
 --
 
@@ -318,6 +360,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`blog_id`);
 
 --
+-- Indexes for table `boci`
+--
+ALTER TABLE `boci`
+  ADD PRIMARY KEY (`boci_id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -352,6 +400,12 @@ ALTER TABLE `kobi_product_area`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_product`
+--
+ALTER TABLE `order_product`
+  ADD PRIMARY KEY (`order_product_id`);
 
 --
 -- Indexes for table `password_resets`
@@ -389,6 +443,12 @@ ALTER TABLE `blog`
   MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT for table `boci`
+--
+ALTER TABLE `boci`
+  MODIFY `boci_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
@@ -423,6 +483,12 @@ ALTER TABLE `kobi_product_area`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `order_product`
+--
+ALTER TABLE `order_product`
+  MODIFY `order_product_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sno_products`

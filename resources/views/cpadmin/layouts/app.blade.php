@@ -362,6 +362,15 @@
                                     <li>
                                         <a href="{{Request::root()}}/pesadmin/c/30">პირველი სექცია</a>
                                     </li>
+                                    <li>
+                                        <a href="{{Request::root()}}/pesadmin/boci/1">ბოცების ფასი</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{Request::root()}}/pesadmin/orderProduct">პროდუქცია</a>
+                                    </li>
+
+                                    
+
 
                                 </ul>
                             </li>

@@ -77,13 +77,15 @@ Route::post('/add_product', 'PesController@add_product_insert')->name('add_produ
 
 
 
+Route::get('/boci/{id}', 'PesController@boci')->name('boci');
+Route::patch('/boci/{id}', 'PesController@updateBoci')->name('updateBoci');
 
 
-
- 
-
-
-
+Route::get('/orderProduct', 'PesController@orderProduct')->name('orderProduct');
+Route::post('/orderProduct', 'PesController@orderProductPost')->name('orderProductPost');
+Route::get('/orderProduct/{id}', 'PesController@orderProductEdit')->name('orderProductEdit');
+Route::patch('/orderProduct/{id}', 'PesController@orderProductUpdate')->name('orderProductUpdate');
+Route::get('/orderProductDelete/{id}', 'PesController@orderProductDelete')->name('orderProductDelete');
  
 
 

@@ -15,6 +15,8 @@ use App\Kobi_products;
 
 use App\Kobilikage;
 use App\Blog;
+use App\Boci;
+use App\OrderProduct;
 
 class ClientController extends Controller
 {
@@ -97,10 +99,11 @@ class ClientController extends Controller
     {
 
 
-
-        return view('order');
+        $Boci = Boci::find(1);
+        $OrderProducts = OrderProduct::all();
+        return view('order', compact('Boci', 'OrderProducts'));
     }
-    
+
 
 
     public function sno_product()
